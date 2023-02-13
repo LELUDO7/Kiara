@@ -8,10 +8,6 @@
 import SwiftUI
 import Foundation
 
-
-
-
-
 @main
 struct KiaraApp: App {
     init() {

@@ -8,8 +8,8 @@
 import SwiftUI
 
 let textFontSize = CGFloat(12)
-let blocHeight = CGFloat(40)
-let blocWidth = CGFloat(55)
+let blocHeight = CGFloat(20)
+let blocWidth = CGFloat(20)
 let dayTextFontSize = CGFloat(17)
 let courseOpacity = 0.8
 
@@ -31,14 +31,16 @@ struct WeekView: View {
                         .font(.system(size: CGFloat(textFontSize)))
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
-                        .frame(width: blocWidth, height: blocHeight)
+                        .frame(width: 33, height: blocHeight)
+                        .frame(maxHeight: .infinity)
                         .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0))
                     ForEach(weekCourseBlocs[0]) { timeBloc in
                         Text(timeBloc.start + "\n" + timeBloc.end)
                             .font(.system(size: CGFloat(textFontSize)))
                             .fixedSize(horizontal: true, vertical: true)
                             .multilineTextAlignment(.center)
-                            .frame(width: blocWidth, height: blocHeight)
+                            .frame(width: 33, height: blocHeight)
+                            .frame(maxHeight: .infinity)
                             .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0))
                         
                     }
@@ -49,6 +51,8 @@ struct WeekView: View {
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
                         .frame(width: blocWidth, height: blocHeight)
+                        .frame(maxWidth:.infinity)
+                        .frame(maxHeight: .infinity)
                         .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color.white).opacity(0))
                     ForEach(blocsMonday){bloc in
                         
@@ -60,6 +64,8 @@ struct WeekView: View {
                                 .frame(width: blocWidth, height:
                                         blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
                                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
+                                .frame(maxWidth:.infinity)
+                                .frame(maxHeight: .infinity)
                         }else if let emptyBloc = bloc as? EmptyBloc{
                             if(emptyBloc.display)
                             {
@@ -67,6 +73,8 @@ struct WeekView: View {
                                     .fixedSize(horizontal: true, vertical: true)
                                     .multilineTextAlignment(.center)
                                     .frame(width: blocWidth, height: blocHeight)
+                                    .frame(maxWidth:.infinity)
+                                    .frame(maxHeight: .infinity)
                                     .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0.4))
                             }
                         }
@@ -82,6 +90,8 @@ struct WeekView: View {
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
                         .frame(width: blocWidth, height: blocHeight)
+                        .frame(maxWidth:.infinity)
+                        .frame(maxHeight: .infinity)
                         .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(.white).opacity(0))
                     ForEach(blocsTuesday){bloc in
                         
@@ -92,6 +102,8 @@ struct WeekView: View {
                                 .multilineTextAlignment(.center)
                                 .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
                                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
+                                .frame(maxWidth:.infinity)
+                                .frame(maxHeight: .infinity)
                         }else if let emptyBloc = bloc as? EmptyBloc{
                             if(emptyBloc.display)
                             {
@@ -99,6 +111,8 @@ struct WeekView: View {
                                     .fixedSize(horizontal: true, vertical: true)
                                     .multilineTextAlignment(.center)
                                     .frame(width: blocWidth, height: blocHeight)
+                                    .frame(maxWidth:.infinity)
+                                    .frame(maxHeight: .infinity)
                                     .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0.4))
                             }
                         }
@@ -114,6 +128,8 @@ struct WeekView: View {
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
                         .frame(width: blocWidth, height: blocHeight)
+                        .frame(maxWidth:.infinity)
+                        .frame(maxHeight: .infinity)
                         .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color.white).opacity(0))
                     ForEach(blocsWednesday){bloc in
                         
@@ -124,6 +140,8 @@ struct WeekView: View {
                                 .multilineTextAlignment(.center)
                                 .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
                                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
+                                .frame(maxWidth:.infinity)
+                                .frame(maxHeight: .infinity)
                         }else if let emptyBloc = bloc as? EmptyBloc{
                             if(emptyBloc.display)
                             {
@@ -131,6 +149,8 @@ struct WeekView: View {
                                     .fixedSize(horizontal: true, vertical: true)
                                     .multilineTextAlignment(.center)
                                     .frame(width: blocWidth, height: blocHeight)
+                                    .frame(maxWidth:.infinity)
+                                    .frame(maxHeight: .infinity)
                                     .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0.4))
                             }
                         }
@@ -146,6 +166,8 @@ struct WeekView: View {
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
                         .frame(width: blocWidth, height: blocHeight)
+                        .frame(maxWidth:.infinity)
+                        .frame(maxHeight: .infinity)
                         .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color.white).opacity(0))
                     ForEach(blocsThursday){bloc in
                         
@@ -156,6 +178,8 @@ struct WeekView: View {
                                 .multilineTextAlignment(.center)
                                 .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
                                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
+                                .frame(maxWidth:.infinity)
+                                .frame(maxHeight: .infinity)
                         }else if let emptyBloc = bloc as? EmptyBloc{
                             if(emptyBloc.display)
                             {
@@ -163,6 +187,8 @@ struct WeekView: View {
                                     .fixedSize(horizontal: true, vertical: true)
                                     .multilineTextAlignment(.center)
                                     .frame(width: blocWidth, height: blocHeight)
+                                    .frame(maxWidth:.infinity)
+                                    .frame(maxHeight: .infinity)
                                     .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0.4))
                             }
                         }
@@ -178,6 +204,8 @@ struct WeekView: View {
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
                         .frame(width: blocWidth, height: blocHeight)
+                        .frame(maxWidth:.infinity)
+                        .frame(maxHeight: .infinity)
                         .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color.white).opacity(0))
                     ForEach(blocsFriday){bloc in
                         
@@ -188,6 +216,8 @@ struct WeekView: View {
                                 .multilineTextAlignment(.center)
                                 .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
                                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
+                                .frame(maxWidth:.infinity)
+                                .frame(maxHeight: .infinity)
                         }else if let emptyBloc = bloc as? EmptyBloc{
                             if(emptyBloc.display)
                             {
@@ -195,6 +225,8 @@ struct WeekView: View {
                                     .fixedSize(horizontal: true, vertical: true)
                                     .multilineTextAlignment(.center)
                                     .frame(width: blocWidth, height: blocHeight)
+                                    .frame(maxWidth:.infinity)
+                                    .frame(maxHeight: .infinity)
                                     .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0.4))
                             }
                         }
@@ -205,6 +237,7 @@ struct WeekView: View {
                     
                 }
             }
+            .padding()
             .onAppear(){
                 blocsMonday = weekCourseBlocs[1]
                 blocsTuesday = weekCourseBlocs[2]
