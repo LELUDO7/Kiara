@@ -11,6 +11,17 @@
 		E9A8491F298A1E9900F205CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8491E298A1E9900F205CB /* ContentView.swift */; };
 		E9A84921298A1E9A00F205CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A84920298A1E9A00F205CB /* Assets.xcassets */; };
 		E9A84924298A1E9A00F205CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A84923298A1E9A00F205CB /* Preview Assets.xcassets */; };
+		E9A8492B298A1EB500F205CB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A8492A298A1EB500F205CB /* Launch Screen.storyboard */; };
+		E9AF40242996C9CD00D7BCE3 /* Bloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF40232996C9CD00D7BCE3 /* Bloc.swift */; };
+		E9AF40272996CA9300D7BCE3 /* CourseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF40262996CA9300D7BCE3 /* CourseBloc.swift */; };
+		E9AF40292996CAC300D7BCE3 /* TimeBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF40282996CAC300D7BCE3 /* TimeBloc.swift */; };
+		E9AF402B29980AAF00D7BCE3 /* EmptyBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF402A29980AAF00D7BCE3 /* EmptyBloc.swift */; };
+		E9AF402D2998116100D7BCE3 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF402C2998116100D7BCE3 /* WeekView.swift */; };
+		E9AF40312998127600D7BCE3 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF40302998127600D7BCE3 /* DayView.swift */; };
+		E9AF40332998128900D7BCE3 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF40322998128900D7BCE3 /* FriendsView.swift */; };
+		E9AF40372998802800D7BCE3 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF40362998802800D7BCE3 /* Day.swift */; };
+		E9AF403D29988CEA00D7BCE3 /* CourseEditoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF403C29988CEA00D7BCE3 /* CourseEditoView.swift */; };
+		E9AF403F29988D5000D7BCE3 /* CourseEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF403E29988D5000D7BCE3 /* CourseEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +30,17 @@
 		E9A8491E298A1E9900F205CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9A84920298A1E9A00F205CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9A84923298A1E9A00F205CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9A8492A298A1EB500F205CB /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E9AF40232996C9CD00D7BCE3 /* Bloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bloc.swift; sourceTree = "<group>"; };
+		E9AF40262996CA9300D7BCE3 /* CourseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBloc.swift; sourceTree = "<group>"; };
+		E9AF40282996CAC300D7BCE3 /* TimeBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBloc.swift; sourceTree = "<group>"; };
+		E9AF402A29980AAF00D7BCE3 /* EmptyBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyBloc.swift; sourceTree = "<group>"; };
+		E9AF402C2998116100D7BCE3 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		E9AF40302998127600D7BCE3 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		E9AF40322998128900D7BCE3 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		E9AF40362998802800D7BCE3 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		E9AF403C29988CEA00D7BCE3 /* CourseEditoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEditoView.swift; sourceTree = "<group>"; };
+		E9AF403E29988D5000D7BCE3 /* CourseEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +57,7 @@
 		E9A84910298A1E9900F205CB = {
 			isa = PBXGroup;
 			children = (
+				E9A8492A298A1EB500F205CB /* Launch Screen.storyboard */,
 				E9A8491B298A1E9900F205CB /* Kiara */,
 				E9A8491A298A1E9900F205CB /* Products */,
 			);
@@ -51,10 +74,13 @@
 		E9A8491B298A1E9900F205CB /* Kiara */ = {
 			isa = PBXGroup;
 			children = (
+				E9AF402F2998126000D7BCE3 /* View */,
 				E9A8491C298A1E9900F205CB /* KiaraApp.swift */,
 				E9A8491E298A1E9900F205CB /* ContentView.swift */,
+				E9AF40252996C9FD00D7BCE3 /* Class */,
 				E9A84920298A1E9A00F205CB /* Assets.xcassets */,
 				E9A84922298A1E9A00F205CB /* Preview Content */,
+				E9AF403E29988D5000D7BCE3 /* CourseEditor.swift */,
 			);
 			path = Kiara;
 			sourceTree = "<group>";
@@ -65,6 +91,29 @@
 				E9A84923298A1E9A00F205CB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E9AF40252996C9FD00D7BCE3 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				E9AF40232996C9CD00D7BCE3 /* Bloc.swift */,
+				E9AF40262996CA9300D7BCE3 /* CourseBloc.swift */,
+				E9AF40282996CAC300D7BCE3 /* TimeBloc.swift */,
+				E9AF402A29980AAF00D7BCE3 /* EmptyBloc.swift */,
+				E9AF40362998802800D7BCE3 /* Day.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		E9AF402F2998126000D7BCE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9AF402C2998116100D7BCE3 /* WeekView.swift */,
+				E9AF40302998127600D7BCE3 /* DayView.swift */,
+				E9AF40322998128900D7BCE3 /* FriendsView.swift */,
+				E9AF403C29988CEA00D7BCE3 /* CourseEditoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A8492B298A1EB500F205CB /* Launch Screen.storyboard in Resources */,
 				E9A84924298A1E9A00F205CB /* Preview Assets.xcassets in Resources */,
 				E9A84921298A1E9A00F205CB /* Assets.xcassets in Resources */,
 			);
@@ -137,6 +187,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AF403D29988CEA00D7BCE3 /* CourseEditoView.swift in Sources */,
+				E9AF403F29988D5000D7BCE3 /* CourseEditor.swift in Sources */,
+				E9AF40272996CA9300D7BCE3 /* CourseBloc.swift in Sources */,
+				E9AF40312998127600D7BCE3 /* DayView.swift in Sources */,
+				E9AF402B29980AAF00D7BCE3 /* EmptyBloc.swift in Sources */,
+				E9AF40372998802800D7BCE3 /* Day.swift in Sources */,
+				E9AF40332998128900D7BCE3 /* FriendsView.swift in Sources */,
+				E9AF40292996CAC300D7BCE3 /* TimeBloc.swift in Sources */,
+				E9AF402D2998116100D7BCE3 /* WeekView.swift in Sources */,
+				E9AF40242996C9CD00D7BCE3 /* Bloc.swift in Sources */,
 				E9A8491F298A1E9900F205CB /* ContentView.swift in Sources */,
 				E9A8491D298A1E9900F205CB /* KiaraApp.swift in Sources */,
 			);
@@ -149,6 +209,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -209,6 +270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -270,11 +332,13 @@
 				DEVELOPMENT_TEAM = TW4Q47HKGX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kiara/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +363,13 @@
 				DEVELOPMENT_TEAM = TW4Q47HKGX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kiara/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
