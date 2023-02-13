@@ -14,11 +14,11 @@ let dayTextFontSize = CGFloat(17)
 let courseOpacity = 0.8
 
 struct WeekView: View {
-    @State var blocsMonday = coursesBlocsMonday
-    @State var blocsTuesday = coursesBlocsTuesday
-    @State var blocsWednesday = coursesBlocsWednesday
-    @State var blocsThursday = coursesBlocsThursday
-    @State var blocsFriday = coursesBlocsFriday
+    @State var blocsMonday = weekCourseBlocs[1]
+    @State var blocsTuesday = weekCourseBlocs[2]
+    @State var blocsWednesday = weekCourseBlocs[3]
+    @State var blocsThursday = weekCourseBlocs[4]
+    @State var blocsFriday = weekCourseBlocs[5]
     
     var body: some View {
         
@@ -33,7 +33,7 @@ struct WeekView: View {
                         .multilineTextAlignment(.center)
                         .frame(width: blocWidth, height: blocHeight)
                         .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0))
-                    ForEach(timesBlocs) { timeBloc in
+                    ForEach(weekCourseBlocs[0]) { timeBloc in
                         Text(timeBloc.start + "\n" + timeBloc.end)
                             .font(.system(size: CGFloat(textFontSize)))
                             .fixedSize(horizontal: true, vertical: true)
@@ -206,11 +206,11 @@ struct WeekView: View {
                 }
             }
             .onAppear(){
-                blocsMonday = coursesBlocsMonday
-                blocsTuesday = coursesBlocsTuesday
-                blocsWednesday = coursesBlocsWednesday
-                blocsThursday = coursesBlocsThursday
-                blocsFriday = coursesBlocsFriday
+                blocsMonday = weekCourseBlocs[1]
+                blocsTuesday = weekCourseBlocs[2]
+                blocsWednesday = weekCourseBlocs[3]
+                blocsThursday = weekCourseBlocs[4]
+                blocsFriday = weekCourseBlocs[5]
             }
             .navigationTitle("Week")
             .toolbar {

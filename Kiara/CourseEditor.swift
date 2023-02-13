@@ -35,15 +35,15 @@ public func addCourse(name:String, local:String, color:UIColor, start:String, en
     switch selectedDay{
     case "monday":
         getBlocId(end: end)
-        coursesBlocsMonday[getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
+        weekCourseBlocs[1][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
     case "tuesday":
-        coursesBlocsTuesday[getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
+        weekCourseBlocs[2][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
     case "wednesday":
-        coursesBlocsWednesday[getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
+        weekCourseBlocs[3][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
     case"thursday":
-        coursesBlocsThursday[getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
+        weekCourseBlocs[4][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
     case "friday":
-        coursesBlocsFriday[getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
+        weekCourseBlocs[5][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
     default:
         print("no day selected")
         
@@ -53,24 +53,28 @@ public func addCourse(name:String, local:String, color:UIColor, start:String, en
 
 private func getBlocId(start:String) -> Int
 {
-    for bloc in timesBlocs
+    var i = 0
+    for bloc in weekCourseBlocs[0]
     {
         if(bloc.start == start)
         {
-            return bloc.blocId
+            return i
         }
+        i+=1
     }
     return -1
 }
 
 private func getBlocId(end:String) -> Int
 {
-    for bloc in timesBlocs
+    var i = 0
+    for bloc in weekCourseBlocs[0]
     {
         if(bloc.end == end)
         {
-            return bloc.blocId
+            return i
         }
+        i+=1
     }
     return -1
 }
@@ -112,7 +116,7 @@ public func SetStartHours(selectedDay:String){
     switch selectedDay{
     case "monday":
         resetStartHours()
-        for bloc in coursesBlocsMonday{
+        for bloc in weekCourseBlocs[1]{
             if let emptyBloc = bloc as? EmptyBloc{
                 if(emptyBloc.display){
                     StartHours.append(emptyBloc.start)
@@ -121,7 +125,7 @@ public func SetStartHours(selectedDay:String){
         }
     case "tuesday":
         resetStartHours()
-        for bloc in coursesBlocsTuesday{
+        for bloc in weekCourseBlocs[2]{
             if let emptyBloc = bloc as? EmptyBloc{
                 if(emptyBloc.display){
                     StartHours.append(emptyBloc.start)
@@ -130,7 +134,7 @@ public func SetStartHours(selectedDay:String){
         }
     case "wednesday":
         resetStartHours()
-        for bloc in coursesBlocsWednesday{
+        for bloc in weekCourseBlocs[3]{
             if let emptyBloc = bloc as? EmptyBloc{
                 if(emptyBloc.display){
                     StartHours.append(emptyBloc.start)
@@ -139,7 +143,7 @@ public func SetStartHours(selectedDay:String){
         }
     case"thursday":
         resetStartHours()
-        for bloc in coursesBlocsThursday{
+        for bloc in weekCourseBlocs[4]{
             if let emptyBloc = bloc as? EmptyBloc{
                 if(emptyBloc.display){
                     StartHours.append(emptyBloc.start)
@@ -148,7 +152,7 @@ public func SetStartHours(selectedDay:String){
         }
     case "friday":
         resetStartHours()
-        for bloc in coursesBlocsFriday{
+        for bloc in weekCourseBlocs[5]{
             if let emptyBloc = bloc as? EmptyBloc{
                 if(emptyBloc.display){
                     StartHours.append(emptyBloc.start)
@@ -167,7 +171,7 @@ public func SetEndHours(selectedDay:String){
     switch selectedDay{
     case "monday":
         resetEndHours()
-        for bloc in coursesBlocsMonday{
+        for bloc in weekCourseBlocs[1]{
             if let emptyBloc = bloc as? EmptyBloc{
                 if(emptyBloc.display){
                     EndHours.append(emptyBloc.end)
@@ -176,7 +180,7 @@ public func SetEndHours(selectedDay:String){
         }
     case "tuesday":
         resetEndHours()
-        for bloc in coursesBlocsTuesday{
+        for bloc in weekCourseBlocs[2]{
             if let emptyBloc = bloc as? EmptyBloc{
                 if(emptyBloc.display){
                     EndHours.append(emptyBloc.end)
@@ -185,7 +189,7 @@ public func SetEndHours(selectedDay:String){
         }
     case "wednesday":
         resetEndHours()
-        for bloc in coursesBlocsWednesday{
+        for bloc in weekCourseBlocs[3]{
             if let emptyBloc = bloc as? EmptyBloc{
                 if(emptyBloc.display){
                     EndHours.append(emptyBloc.end)
@@ -194,7 +198,7 @@ public func SetEndHours(selectedDay:String){
         }
     case"thursday":
         resetEndHours()
-        for bloc in coursesBlocsThursday{
+        for bloc in weekCourseBlocs[4]{
             if let emptyBloc = bloc as? EmptyBloc{
                 if(emptyBloc.display){
                     EndHours.append(emptyBloc.end)
@@ -203,7 +207,7 @@ public func SetEndHours(selectedDay:String){
         }
     case "friday":
         resetEndHours()
-        for bloc in coursesBlocsFriday{
+        for bloc in weekCourseBlocs[5]{
             if let emptyBloc = bloc as? EmptyBloc{
                 if(emptyBloc.display){
                     EndHours.append(emptyBloc.end)

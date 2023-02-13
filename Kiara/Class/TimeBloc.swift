@@ -8,9 +8,4 @@
 import Foundation
 
 public class TimeBloc: Bloc {
-    var blocId: Int
-    init(start: String, end: String, blocId:Int) {
-        self.blocId = blocId
-        super.init(start: start, end: end)
-    }
 }
