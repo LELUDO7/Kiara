@@ -15,7 +15,7 @@ struct CourseEditorView: View {
     @State var local: String = ""
     
     @State var selectedColors = BlocColors[0]
-    @State var selectedDay = WeekDaysNamePicker.SelectDay
+    @State var selectedDay = WeekDaysNamePicker[0]
     @State var selectedStartHour = StartHours[0]
     @State var selectedEndHour = EndHours[0]
     
@@ -31,15 +31,15 @@ struct CourseEditorView: View {
                     Text(color.name?.capitalized ?? "") // 5
                 }
             }
-            Picker("Pick a day", selection: $selectedDay) { // 3
-                ForEach(WeekDaysNamePicker.allCases, id: \.self) { day in // 4
-                    Text(day.rawValue.capitalized) // 5
+            Picker("Pick a day", selection: $selectedDay) {
+                ForEach(WeekDaysNamePicker, id: \.self) { day in // 4
+                    Text(day.name) // 5
                 }
             }
             .onChange(of: selectedDay){ newValue in
-                SetStartHours(selectedDay: selectedDay.rawValue)
+                SetStartHours(selectedDay: selectedDay.dayId)
                 startHoursPicker = StartHours
-                SetEndHours(selectedDay: selectedDay.rawValue)
+                SetEndHours(selectedDay: selectedDay.dayId)
                 endHoursPicker = EndHours
             }
             Picker("Pick a Start Hour", selection: $selectedStartHour) { // 3
@@ -53,8 +53,14 @@ struct CourseEditorView: View {
                 }
             }
             Button("Add course") {
-                isErrorShowing = addCourse(name:name, local:local,color: selectedColors, start: selectedStartHour, end: selectedEndHour, selectedDay:selectedDay.rawValue)
-
+                isErrorShowing = addCourse(name:name, local:local,color: selectedColors, start: selectedStartHour, end: selectedEndHour, selectedDay:selectedDay.dayId)
+                if(!isErrorShowing)
+                {
+                    selectedDay = WeekDaysNamePicker[0]
+                    selectedColors = BlocColors[0]
+                    selectedStartHour = StartHours[0]
+                    selectedEndHour = EndHours[0]
+                }
             }
         }
         .alert(isPresented: $isErrorShowing) {

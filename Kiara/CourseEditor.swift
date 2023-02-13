@@ -10,16 +10,16 @@ import SwiftUI
 
 public var editorErrorMessage:String = ""
 
-public func addCourse(name:String, local:String, color:UIColor, start:String, end:String, selectedDay:String) -> Bool
+public func addCourse(name:String, local:String, color:UIColor, start:String, end:String, selectedDay:Int) -> Bool
 {
     if(name == "")
     {
         editorErrorMessage = "Enter a name"
         return true
     }
-    else if(selectedDay == "Select a day" )
+    else if(selectedDay == 0 )
     {
-        editorErrorMessage = selectedDay
+        editorErrorMessage = "Select a day"
         return true
     }
     else if(start == "Select course start hour")
@@ -32,22 +32,9 @@ public func addCourse(name:String, local:String, color:UIColor, start:String, en
         editorErrorMessage = end
         return true
     }
-    switch selectedDay{
-    case "monday":
-        getBlocId(end: end)
-        weekCourseBlocs[1][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
-    case "tuesday":
-        weekCourseBlocs[2][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
-    case "wednesday":
-        weekCourseBlocs[3][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
-    case"thursday":
-        weekCourseBlocs[4][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
-    case "friday":
-        weekCourseBlocs[5][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
-    default:
-        print("no day selected")
-        
-    }
+    weekCourseBlocs[selectedDay][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
+    resetStartHours()
+    resetEndHours()
     return false
 }
 
@@ -99,126 +86,56 @@ extension UIColor {
     }
 }
 
-public enum WeekDaysNamePicker : String, CaseIterable {
-    case SelectDay = "Select a day"
-    case monday
-    case tuesday
-    case wednesday
-    case thursday
-    case friday
+public var WeekDaysNamePicker = [
+    WeekDay(dayId: 0, name:"Select a day"),
+    WeekDay(dayId: 1, name:"monday"),
+    WeekDay(dayId:2, name:"tuesday"),
+    WeekDay(dayId:3, name:"wednesday"),
+    WeekDay(dayId:4, name:"thursday"),
+    WeekDay(dayId:5, name:"friday")]
+
+public struct WeekDay: Hashable, Identifiable{
+    public var id: Int{
+        return dayId
+    }
+    var dayId:Int
+    var name:String
 }
+
+
 public var StartHours = ["Select course start hour"]
 public var EndHours = ["Select course end hour"]
 
-
-public func SetStartHours(selectedDay:String){
-    print(selectedDay)
-    switch selectedDay{
-    case "monday":
-        resetStartHours()
-        for bloc in weekCourseBlocs[1]{
-            if let emptyBloc = bloc as? EmptyBloc{
-                if(emptyBloc.display){
-                    StartHours.append(emptyBloc.start)
-                }
+public func SetStartHours(selectedDay:Int){
+    resetStartHours()
+    if(selectedDay == 0){ return }
+    
+    for bloc in weekCourseBlocs[selectedDay]{
+        if let emptyBloc = bloc as? EmptyBloc{
+            if(emptyBloc.display){
+                StartHours.append(emptyBloc.start)
             }
         }
-    case "tuesday":
-        resetStartHours()
-        for bloc in weekCourseBlocs[2]{
-            if let emptyBloc = bloc as? EmptyBloc{
-                if(emptyBloc.display){
-                    StartHours.append(emptyBloc.start)
-                }
-            }
-        }
-    case "wednesday":
-        resetStartHours()
-        for bloc in weekCourseBlocs[3]{
-            if let emptyBloc = bloc as? EmptyBloc{
-                if(emptyBloc.display){
-                    StartHours.append(emptyBloc.start)
-                }
-            }
-        }
-    case"thursday":
-        resetStartHours()
-        for bloc in weekCourseBlocs[4]{
-            if let emptyBloc = bloc as? EmptyBloc{
-                if(emptyBloc.display){
-                    StartHours.append(emptyBloc.start)
-                }
-            }
-        }
-    case "friday":
-        resetStartHours()
-        for bloc in weekCourseBlocs[5]{
-            if let emptyBloc = bloc as? EmptyBloc{
-                if(emptyBloc.display){
-                    StartHours.append(emptyBloc.start)
-                }
-            }
-        }
-    default:
-        resetStartHours()
-        
     }
     
 }
 
-public func SetEndHours(selectedDay:String){
-    print(selectedDay)
-    switch selectedDay{
-    case "monday":
-        resetEndHours()
-        for bloc in weekCourseBlocs[1]{
-            if let emptyBloc = bloc as? EmptyBloc{
-                if(emptyBloc.display){
-                    EndHours.append(emptyBloc.end)
-                }
-            }
-        }
-    case "tuesday":
-        resetEndHours()
-        for bloc in weekCourseBlocs[2]{
-            if let emptyBloc = bloc as? EmptyBloc{
-                if(emptyBloc.display){
-                    EndHours.append(emptyBloc.end)
-                }
-            }
-        }
-    case "wednesday":
-        resetEndHours()
-        for bloc in weekCourseBlocs[3]{
-            if let emptyBloc = bloc as? EmptyBloc{
-                if(emptyBloc.display){
-                    EndHours.append(emptyBloc.end)
-                }
-            }
-        }
-    case"thursday":
-        resetEndHours()
-        for bloc in weekCourseBlocs[4]{
-            if let emptyBloc = bloc as? EmptyBloc{
-                if(emptyBloc.display){
-                    EndHours.append(emptyBloc.end)
-                }
-            }
-        }
-    case "friday":
-        resetEndHours()
-        for bloc in weekCourseBlocs[5]{
-            if let emptyBloc = bloc as? EmptyBloc{
-                if(emptyBloc.display){
-                    EndHours.append(emptyBloc.end)
-                }
-            }
-        }
-    default:
-        resetEndHours()
-        
-    }
+public func SetEndHours(selectedDay:Int){
     
+    resetEndHours()
+    if(selectedDay == 0){ return }
+    
+    for bloc in weekCourseBlocs[selectedDay]{
+        if let emptyBloc = bloc as? EmptyBloc{
+            if(emptyBloc.display){
+                EndHours.append(emptyBloc.end)
+            }
+        }
+    }
+}
+
+public func resetColor(){
+
 }
 
 public func resetStartHours(){
