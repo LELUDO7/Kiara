@@ -63,9 +63,9 @@ struct WeekView: View {
                                 .multilineTextAlignment(.center)
                                 .frame(width: blocWidth, height:
                                         blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
-                                .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
                                 .frame(maxWidth:.infinity)
                                 .frame(maxHeight: .infinity)
+                                .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
                         }else if let emptyBloc = bloc as? EmptyBloc{
                             if(emptyBloc.display)
                             {
@@ -101,9 +101,9 @@ struct WeekView: View {
                                 .fixedSize(horizontal: true, vertical: true)
                                 .multilineTextAlignment(.center)
                                 .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
-                                .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
                                 .frame(maxWidth:.infinity)
                                 .frame(maxHeight: .infinity)
+                                .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
                         }else if let emptyBloc = bloc as? EmptyBloc{
                             if(emptyBloc.display)
                             {
@@ -139,9 +139,9 @@ struct WeekView: View {
                                 .fixedSize(horizontal: true, vertical: true)
                                 .multilineTextAlignment(.center)
                                 .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
-                                .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
                                 .frame(maxWidth:.infinity)
                                 .frame(maxHeight: .infinity)
+                                .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
                         }else if let emptyBloc = bloc as? EmptyBloc{
                             if(emptyBloc.display)
                             {
@@ -177,9 +177,9 @@ struct WeekView: View {
                                 .fixedSize(horizontal: true, vertical: true)
                                 .multilineTextAlignment(.center)
                                 .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
-                                .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
                                 .frame(maxWidth:.infinity)
                                 .frame(maxHeight: .infinity)
+                                .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
                         }else if let emptyBloc = bloc as? EmptyBloc{
                             if(emptyBloc.display)
                             {
@@ -215,9 +215,9 @@ struct WeekView: View {
                                 .fixedSize(horizontal: true, vertical: true)
                                 .multilineTextAlignment(.center)
                                 .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
-                                .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
                                 .frame(maxWidth:.infinity)
                                 .frame(maxHeight: .infinity)
+                                .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
                         }else if let emptyBloc = bloc as? EmptyBloc{
                             if(emptyBloc.display)
                             {
