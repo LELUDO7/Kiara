@@ -9,27 +9,38 @@ import Foundation
 import SwiftUI
 
 public var editorErrorMessage:String = ""
+public var StartHours = [STRING.START_H_PICKER_S]
+public var EndHours = [STRING.END_H_PICKER_S]
+public var WeekDaysNamePicker = [
+    WeekDay(dayId:0, name:STRING.DAY_PICKER_S),
+    WeekDay(dayId:1, name:STRING.MONDAY_S),
+    WeekDay(dayId:2, name:STRING.TUESDAY_S),
+    WeekDay(dayId:3, name:STRING.WEDNESDAY_S),
+    WeekDay(dayId:4, name:STRING.THURSDAY_S),
+    WeekDay(dayId:5, name:STRING.FRIDAY_S)]
+public var BlocColors = [UIColor.systemYellow, UIColor.systemRed,UIColor.systemBlue, UIColor.systemCyan,UIColor.systemPink,UIColor.systemPurple,UIColor.systemOrange, UIColor.systemGreen,UIColor.systemBlue,UIColor.systemCyan]
+
 
 public func addCourse(name:String, local:String, color:UIColor, start:String, end:String, selectedDay:Int) -> Bool
 {
     if(name == "")
     {
-        editorErrorMessage = "Enter a name"
+        editorErrorMessage = STRING.E_NAME_S
         return true
     }
     else if(selectedDay == 0 )
     {
-        editorErrorMessage = "Select a day"
+        editorErrorMessage = STRING.E_DAY_S
         return true
     }
-    else if(start == "Select course start hour")
+    else if(start == STRING.START_H_PICKER_S)
     {
-        editorErrorMessage = start
+        editorErrorMessage = STRING.E_START_H_S
         return true
     }
-    else if(end == "Select course end hour")
+    else if(end == STRING.END_H_PICKER_S)
     {
-        editorErrorMessage = end
+        editorErrorMessage = STRING.E_END_H_S
         return true
     }
     weekCourseBlocs[selectedDay][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
@@ -66,33 +77,23 @@ private func getBlocId(end:String) -> Int
     return -1
 }
 
-public var BlocColors = [UIColor.systemYellow, UIColor.systemRed,UIColor.systemBlue, UIColor.systemCyan,UIColor.systemPink,UIColor.systemPurple,UIColor.systemOrange, UIColor.systemGreen,UIColor.systemBlue,UIColor.systemCyan]
-
 extension UIColor {
     var name: String? {
         switch self {
-        case UIColor.systemGray : return "gray"
-        case UIColor.systemRed: return "red"
-        case UIColor.systemGreen: return "green"
-        case UIColor.systemBlue: return "blue"
-        case UIColor.systemCyan: return "cyan"
-        case UIColor.systemYellow: return "yellow"
-        case UIColor.systemOrange: return "orange"
-        case UIColor.systemPink: return "pink"
-        case UIColor.systemPurple: return "purple"
-        case UIColor.systemBrown: return "brown"
+        case UIColor.systemGray : return STRING.C_GRAY_S
+        case UIColor.systemRed: return STRING.C_RED_S
+        case UIColor.systemGreen: return STRING.C_GREEN_S
+        case UIColor.systemBlue: return STRING.C_BLUE_S
+        case UIColor.systemCyan: return STRING.C_CYAN_S
+        case UIColor.systemYellow: return STRING.C_YELLOW_S
+        case UIColor.systemOrange: return STRING.C_ORANGE_S
+        case UIColor.systemPink: return STRING.C_PINK_S
+        case UIColor.systemPurple: return STRING.C_PURPLE_S
+        case UIColor.systemBrown: return STRING.C_BROWN_S
         default: return nil
         }
     }
 }
-
-public var WeekDaysNamePicker = [
-    WeekDay(dayId: 0, name:"Select a day"),
-    WeekDay(dayId: 1, name:"monday"),
-    WeekDay(dayId:2, name:"tuesday"),
-    WeekDay(dayId:3, name:"wednesday"),
-    WeekDay(dayId:4, name:"thursday"),
-    WeekDay(dayId:5, name:"friday")]
 
 public struct WeekDay: Hashable, Identifiable{
     public var id: Int{
@@ -101,10 +102,6 @@ public struct WeekDay: Hashable, Identifiable{
     var dayId:Int
     var name:String
 }
-
-
-public var StartHours = ["Select course start hour"]
-public var EndHours = ["Select course end hour"]
 
 public func SetStartHours(selectedDay:Int){
     resetStartHours()
@@ -135,16 +132,16 @@ public func SetEndHours(selectedDay:Int){
 }
 
 public func resetColor(){
-
+    
 }
 
 public func resetStartHours(){
     StartHours.removeAll()
-    StartHours.append("Select course start hour")
+    StartHours.append(STRING.START_H_PICKER_S)
 }
 
 public func resetEndHours(){
     EndHours.removeAll()
-    EndHours.append("Select course end hour")
+    EndHours.append(STRING.END_H_PICKER_S)
 }
 

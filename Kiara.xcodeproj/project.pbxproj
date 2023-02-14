@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9106385299B155400C5FC7F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9106387299B155400C5FC7F /* Localizable.strings */; };
+		E910638A299B1A9A00C5FC7F /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9106389299B1A9A00C5FC7F /* LocalizableString.swift */; };
 		E9A8491D298A1E9900F205CB /* KiaraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8491C298A1E9900F205CB /* KiaraApp.swift */; };
 		E9A8491F298A1E9900F205CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8491E298A1E9900F205CB /* ContentView.swift */; };
 		E9A84921298A1E9A00F205CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A84920298A1E9A00F205CB /* Assets.xcassets */; };
@@ -25,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9106386299B155400C5FC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E9106388299B155900C5FC7F /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; usesTabs = 0; };
+		E9106389299B1A9A00C5FC7F /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
 		E9A84919298A1E9900F205CB /* Kiara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A8491C298A1E9900F205CB /* KiaraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiaraApp.swift; sourceTree = "<group>"; };
 		E9A8491E298A1E9900F205CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 		E9A84910298A1E9900F205CB = {
 			isa = PBXGroup;
 			children = (
+				E9106387299B155400C5FC7F /* Localizable.strings */,
 				E9A8492A298A1EB500F205CB /* Launch Screen.storyboard */,
 				E9A8491B298A1E9900F205CB /* Kiara */,
 				E9A8491A298A1E9900F205CB /* Products */,
@@ -77,10 +83,11 @@
 				E9AF402F2998126000D7BCE3 /* View */,
 				E9A8491C298A1E9900F205CB /* KiaraApp.swift */,
 				E9A8491E298A1E9900F205CB /* ContentView.swift */,
-				E9AF40252996C9FD00D7BCE3 /* Class */,
+				E9AF40252996C9FD00D7BCE3 /* Object */,
 				E9A84920298A1E9A00F205CB /* Assets.xcassets */,
 				E9A84922298A1E9A00F205CB /* Preview Content */,
 				E9AF403E29988D5000D7BCE3 /* CourseEditor.swift */,
+				E9106389299B1A9A00C5FC7F /* LocalizableString.swift */,
 			);
 			path = Kiara;
 			sourceTree = "<group>";
@@ -93,7 +100,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E9AF40252996C9FD00D7BCE3 /* Class */ = {
+		E9AF40252996C9FD00D7BCE3 /* Object */ = {
 			isa = PBXGroup;
 			children = (
 				E9AF40232996C9CD00D7BCE3 /* Bloc.swift */,
@@ -102,7 +109,7 @@
 				E9AF402A29980AAF00D7BCE3 /* EmptyBloc.swift */,
 				E9AF40362998802800D7BCE3 /* Day.swift */,
 			);
-			path = Class;
+			path = Object;
 			sourceTree = "<group>";
 		};
 		E9AF402F2998126000D7BCE3 /* View */ = {
@@ -158,6 +165,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"fr-CA",
 			);
 			mainGroup = E9A84910298A1E9900F205CB;
 			productRefGroup = E9A8491A298A1E9900F205CB /* Products */;
@@ -175,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A8492B298A1EB500F205CB /* Launch Screen.storyboard in Resources */,
+				E9106385299B155400C5FC7F /* Localizable.strings in Resources */,
 				E9A84924298A1E9A00F205CB /* Preview Assets.xcassets in Resources */,
 				E9A84921298A1E9A00F205CB /* Assets.xcassets in Resources */,
 			);
@@ -195,6 +204,7 @@
 				E9AF40372998802800D7BCE3 /* Day.swift in Sources */,
 				E9AF40332998128900D7BCE3 /* FriendsView.swift in Sources */,
 				E9AF40292996CAC300D7BCE3 /* TimeBloc.swift in Sources */,
+				E910638A299B1A9A00C5FC7F /* LocalizableString.swift in Sources */,
 				E9AF402D2998116100D7BCE3 /* WeekView.swift in Sources */,
 				E9AF40242996C9CD00D7BCE3 /* Bloc.swift in Sources */,
 				E9A8491F298A1E9900F205CB /* ContentView.swift in Sources */,
@@ -203,6 +213,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E9106387299B155400C5FC7F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9106386299B155400C5FC7F /* en */,
+				E9106388299B155900C5FC7F /* fr-CA */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E9A84925298A1E9A00F205CB /* Debug */ = {

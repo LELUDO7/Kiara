@@ -46,7 +46,7 @@ struct WeekView: View {
                     }
                 }
                 VStack{
-                    Text("Mon")
+                    Text(STRING.MON_S)
                         .font(.system(size: dayTextFontSize))
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
@@ -85,7 +85,7 @@ struct WeekView: View {
                     
                 }
                 VStack{
-                    Text("Tues")
+                    Text(STRING.TUES_S)
                         .font(.system(size: dayTextFontSize))
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
@@ -123,7 +123,7 @@ struct WeekView: View {
                     
                 }
                 VStack{
-                    Text("Wed")
+                    Text(STRING.WED_S)
                         .font(.system(size: dayTextFontSize))
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
@@ -161,7 +161,7 @@ struct WeekView: View {
                     
                 }
                 VStack{
-                    Text("Thu")
+                    Text(STRING.THU_S)
                         .font(.system(size: dayTextFontSize))
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
@@ -199,7 +199,7 @@ struct WeekView: View {
                     
                 }
                 VStack{
-                    Text("Fri")
+                    Text(STRING.FRI_S)
                         .font(.system(size: dayTextFontSize))
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
@@ -245,11 +245,13 @@ struct WeekView: View {
                 blocsThursday = weekCourseBlocs[4]
                 blocsFriday = weekCourseBlocs[5]
             }
-            .navigationTitle("Week")
+            .navigationTitle(STRING.WEEK_S)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink("Add course") {
-                        CourseEditorView()
+                    NavigationLink(destination: CourseEditorView()) {
+                        HStack{
+                            Image(systemName: "square.and.pencil")
+                        }
                     }
                 }
             }

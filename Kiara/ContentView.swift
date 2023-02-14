@@ -17,15 +17,15 @@ struct ContentView: View {
             
             WeekView().tabItem {
                 Image(systemName: "calendar")
-                Text("Week")
+                Text(STRING.WEEK_S)
             }
             DayView().tabItem {
                 Image(systemName: "calendar")
-                Text("Day")
+                Text(STRING.DAY_S)
             }
             FriendsView().tabItem {
                 Image(systemName: "person.2.fill")
-                Text("Friends")
+                Text(STRING.FRIENDS_S)
             }
             
             

@@ -20,7 +20,7 @@ struct KiaraApp: App {
     }
 }
 
-
+public let STRING = StringLocal()
 
 public var weekCourseBlocs = [[Bloc]]()
 
@@ -30,8 +30,6 @@ public func loadScheduleTemplate(establishmentNameId:Int){
         weekCourseBlocs.append(cstjTemplate)
     }
 }
-
-private var template = [[Bloc]]()
 
 private var cstjTemplate: [Bloc] = [
     EmptyBloc(start: "08:00",end: "08:50", display: true),

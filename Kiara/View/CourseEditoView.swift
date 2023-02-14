@@ -23,15 +23,15 @@ struct CourseEditorView: View {
     @State var endHoursPicker = EndHours
     var body: some View {
         VStack{
-            TextField("Name", text: $name).multilineTextAlignment(.center)
-            TextField("Local", text: $local).multilineTextAlignment(.center)
+            TextField(STRING.NAME_S, text: $name).multilineTextAlignment(.center)
+            TextField(STRING.LOCAL_S, text: $local).multilineTextAlignment(.center)
             
-            Picker("Pick a color", selection: $selectedColors) { // 3
+            Picker(STRING.COLOR_PICKER_S, selection: $selectedColors) { // 3
                 ForEach(BlocColors, id: \.self) { color in // 4
                     Text(color.name?.capitalized ?? "") // 5
                 }
             }
-            Picker("Pick a day", selection: $selectedDay) {
+            Picker(STRING.DAY_PICKER_S, selection: $selectedDay) {
                 ForEach(WeekDaysNamePicker, id: \.self) { day in // 4
                     Text(day.name) // 5
                 }
@@ -42,17 +42,17 @@ struct CourseEditorView: View {
                 SetEndHours(selectedDay: selectedDay.dayId)
                 endHoursPicker = EndHours
             }
-            Picker("Pick a Start Hour", selection: $selectedStartHour) { // 3
+            Picker(STRING.START_H_PICKER_S, selection: $selectedStartHour) { // 3
                 ForEach(startHoursPicker, id: \.self) { hour in // 4
                     Text(hour) // 5
                 }
             }
-            Picker("Pick a end Hour", selection: $selectedEndHour) { // 3
+            Picker(STRING.END_H_PICKER_S, selection: $selectedEndHour) { // 3
                 ForEach(endHoursPicker, id: \.self) { hour in // 4
                     Text(hour) // 5
                 }
             }
-            Button("Add course") {
+            Button(STRING.ADD_COURSE_S) {
                 isErrorShowing = addCourse(name:name, local:local,color: selectedColors, start: selectedStartHour, end: selectedEndHour, selectedDay:selectedDay.dayId)
                 if(!isErrorShowing)
                 {
@@ -65,7 +65,7 @@ struct CourseEditorView: View {
         }
         .alert(isPresented: $isErrorShowing) {
                     Alert(
-                        title: Text("Error"),
+                        title: Text(STRING.ERROR_S),
                         message: Text(editorErrorMessage),
                         dismissButton: .default(Text("OK"))
                     )
@@ -73,7 +73,7 @@ struct CourseEditorView: View {
         .onDisappear(){
             resetStartHours()
         }
-        .navigationTitle("Add course")
+        .navigationTitle(STRING.ADD_COURSE_S)
     }
     
 }

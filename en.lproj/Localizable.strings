@@ -1,0 +1,52 @@
+/* 
+  Localizable.strings
+  Kiara
+
+  Created by Ludovic Fournier on 2023-02-13.
+  
+*/
+"WEEK_S" = "Week";
+"DAY_S" = "Day";
+"FRIENDS_S" = "Friends";
+
+"ERROR_S" = "Error";
+"E_NAME_S" = "Enter a name";
+"E_DAY_S" = "Select a day";
+"E_START_H_S" = "Select a start time";
+"E_END_H_S" = "Select a end time";
+
+"MON_S" = "Mon";
+"TUES_S" = "Tues";
+"WED_S" = "Wed";
+"THU_S" = "Thu";
+"FRI_S" = "Fri";
+
+"MONDAY_S" = "Monday";
+"TUESDAY_S" = "Tuesday";
+"WEDNESDAY_S" = "Wednesday";
+"THURSDAY_S" = "Thurday";
+"FRIDAY_S" = "Friday";
+
+"NAME_S" = "Name";
+"LOCAL_S" = "Local";
+
+"COLOR_PICKER_S" = "Select a color";
+"DAY_PICKER_S" = "Select a day";
+"START_H_PICKER_S" = "Start time";
+"END_H_PICKER_S" = "End time";
+
+"ADD_COURSE_S" = "Add course";
+
+"C_GRAY_S" = "gray";
+"C_RED_S" = "red";
+"C_GREEN_S" = "green";
+"C_BLUE_S" = "blue";
+"C_CYAN_S" = "cyan";
+"C_YELLOW_S" = "yellow";
+"C_ORANGE_S" = "orange";
+"C_PINK_S" = "pink";
+"C_PURPLE_S" = "purple";
+"C_BROWN_S" =  "brown";
+
+
+
