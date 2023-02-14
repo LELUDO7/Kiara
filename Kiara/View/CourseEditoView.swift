@@ -64,6 +64,8 @@ struct CourseEditorView: View {
                         selectedColors = BlocColors[0]
                         selectedStartHour = StartHours[0]
                         selectedEndHour = EndHours[0]
+                        name = ""
+                        local = ""
                     }
                 }
             }
