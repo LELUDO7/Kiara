@@ -39,13 +39,15 @@ struct CourseEditorView: View {
             .onChange(of: selectedDay){ newValue in
                 SetStartHours(selectedDay: selectedDay.dayId)
                 startHoursPicker = StartHours
-                SetEndHours(selectedDay: selectedDay.dayId)
-                endHoursPicker = EndHours
             }
             Picker(STRING.START_H_PICKER_S, selection: $selectedStartHour) { // 3
                 ForEach(startHoursPicker, id: \.self) { hour in // 4
                     Text(hour) // 5
                 }
+            }
+            .onChange(of: selectedStartHour){ newValue in
+                SetEndHours(selectedDay: selectedDay.dayId, start: selectedStartHour)
+                endHoursPicker = EndHours
             }
             Picker(STRING.END_H_PICKER_S, selection: $selectedEndHour) { // 3
                 ForEach(endHoursPicker, id: \.self) { hour in // 4

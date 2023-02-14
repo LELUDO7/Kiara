@@ -23,6 +23,7 @@ public var BlocColors = [UIColor.systemYellow, UIColor.systemRed,UIColor.systemB
 
 public func addCourse(name:String, local:String, color:UIColor, start:String, end:String, selectedDay:Int) -> Bool
 {
+    let nbBloc = getBlocId(end: end) - getBlocId(start: start)
     if(name == "")
     {
         editorErrorMessage = STRING.E_NAME_S
@@ -43,7 +44,13 @@ public func addCourse(name:String, local:String, color:UIColor, start:String, en
         editorErrorMessage = STRING.E_END_H_S
         return true
     }
-    weekCourseBlocs[selectedDay][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: 0)
+    weekCourseBlocs[selectedDay][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: nbBloc)
+    if(nbBloc > 0)
+    {
+        for i in 1...nbBloc {
+            weekCourseBlocs[selectedDay][getBlocId(start: start)+i] = EmptyBloc(start: start, end: end, display: false)
+        }
+    }
     resetStartHours()
     resetEndHours()
     return false
@@ -117,18 +124,52 @@ public func SetStartHours(selectedDay:Int){
     
 }
 
-public func SetEndHours(selectedDay:Int){
+public func SetEndHours(selectedDay:Int, start:String){
     
     resetEndHours()
     if(selectedDay == 0){ return }
     
     for bloc in weekCourseBlocs[selectedDay]{
         if let emptyBloc = bloc as? EmptyBloc{
-            if(emptyBloc.display){
+            if(emptyBloc.display && validateEndHour(start: getBlocId(start: start), end: getBlocId(end: bloc.end), day: selectedDay)){
                 EndHours.append(emptyBloc.end)
             }
         }
     }
+}
+
+public func validateEndHour(start:Int, end:Int, day:Int) ->Bool
+{
+    var i = 0
+    var u = false
+    for bloc in weekCourseBlocs[day]
+    {
+        if(i==start)
+        {
+            u = true
+        }
+        if(u)
+        {
+            if(i==end)
+            {
+                return true
+            }
+            if let emptyBloc = bloc as? EmptyBloc
+            {
+                if(!emptyBloc.display)
+                {
+                    return false
+                }
+            }
+            else
+            {
+                return false
+            }
+        }
+        
+        i+=1
+    }
+    return false
 }
 
 public func resetColor(){
