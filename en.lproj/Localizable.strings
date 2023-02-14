@@ -30,10 +30,10 @@
 "NAME_S" = "Name";
 "LOCAL_S" = "Local";
 
-"COLOR_PICKER_S" = "Select a color";
-"DAY_PICKER_S" = "Select a day";
-"START_H_PICKER_S" = "Start time";
-"END_H_PICKER_S" = "End time";
+"COLOR_PICKER_S" = "Color :";
+"DAY_PICKER_S" = "Day :";
+"START_H_PICKER_S" = "Start time :";
+"END_H_PICKER_S" = "End time :";
 
 "ADD_COURSE_S" = "Add course";
 

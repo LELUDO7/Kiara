@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 public var editorErrorMessage:String = ""
-public var StartHours = [STRING.START_H_PICKER_S]
-public var EndHours = [STRING.END_H_PICKER_S]
+public var StartHours = ["N/A"]
+public var EndHours = ["N/A"]
 public var WeekDaysNamePicker = [
-    WeekDay(dayId:0, name:STRING.DAY_PICKER_S),
+    WeekDay(dayId:0, name:" "),
     WeekDay(dayId:1, name:STRING.MONDAY_S),
     WeekDay(dayId:2, name:STRING.TUESDAY_S),
     WeekDay(dayId:3, name:STRING.WEDNESDAY_S),
@@ -24,7 +24,7 @@ public var BlocColors = [UIColor.systemYellow, UIColor.systemRed,UIColor.systemB
 public func addCourse(name:String, local:String, color:UIColor, start:String, end:String, selectedDay:Int) -> Bool
 {
     let nbBloc = getBlocId(end: end) - getBlocId(start: start)
-    if(name == "")
+    if(name == " ")
     {
         editorErrorMessage = STRING.E_NAME_S
         return true
@@ -178,11 +178,11 @@ public func resetColor(){
 
 public func resetStartHours(){
     StartHours.removeAll()
-    StartHours.append(STRING.START_H_PICKER_S)
+    StartHours.append("N/A")
 }
 
 public func resetEndHours(){
     EndHours.removeAll()
-    EndHours.append(STRING.END_H_PICKER_S)
+    EndHours.append("N/A")
 }
 
