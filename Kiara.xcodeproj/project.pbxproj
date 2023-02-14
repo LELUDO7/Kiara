@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9063FCE299C08F60030DC96 /* DayBlocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9063FCD299C08F60030DC96 /* DayBlocView.swift */; };
 		E9106385299B155400C5FC7F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9106387299B155400C5FC7F /* Localizable.strings */; };
 		E910638A299B1A9A00C5FC7F /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9106389299B1A9A00C5FC7F /* LocalizableString.swift */; };
 		E9A8491D298A1E9900F205CB /* KiaraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8491C298A1E9900F205CB /* KiaraApp.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9063FCD299C08F60030DC96 /* DayBlocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBlocView.swift; sourceTree = "<group>"; };
 		E9106386299B155400C5FC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9106388299B155900C5FC7F /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; usesTabs = 0; };
 		E9106389299B1A9A00C5FC7F /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				E9AF40302998127600D7BCE3 /* DayView.swift */,
 				E9AF40322998128900D7BCE3 /* FriendsView.swift */,
 				E9AF403C29988CEA00D7BCE3 /* CourseEditoView.swift */,
+				E9063FCD299C08F60030DC96 /* DayBlocView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				E9AF40272996CA9300D7BCE3 /* CourseBloc.swift in Sources */,
 				E9AF40312998127600D7BCE3 /* DayView.swift in Sources */,
 				E9AF402B29980AAF00D7BCE3 /* EmptyBloc.swift in Sources */,
+				E9063FCE299C08F60030DC96 /* DayBlocView.swift in Sources */,
 				E9AF40372998802800D7BCE3 /* Day.swift in Sources */,
 				E9AF40332998128900D7BCE3 /* FriendsView.swift in Sources */,
 				E9AF40292996CAC300D7BCE3 /* TimeBloc.swift in Sources */,

@@ -37,6 +37,7 @@ public struct StringLocal{
     let DAY_PICKER_S = NSLocalizedString("DAY_PICKER_S", comment:"")
     let START_H_PICKER_S = NSLocalizedString("START_H_PICKER_S", comment:"")
     let END_H_PICKER_S = NSLocalizedString("END_H_PICKER_S", comment:"")
+    let NA_S = NSLocalizedString("N/A_S", comment:"")
     
     let ADD_COURSE_S = NSLocalizedString("ADD_COURSE_S", comment: "")
     

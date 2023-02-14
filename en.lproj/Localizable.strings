@@ -34,6 +34,7 @@
 "DAY_PICKER_S" = "Day :";
 "START_H_PICKER_S" = "Start time :";
 "END_H_PICKER_S" = "End time :";
+"N/A_S" = "N/A";
 
 "ADD_COURSE_S" = "Add course";
 

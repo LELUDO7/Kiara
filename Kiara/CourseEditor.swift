@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 public var editorErrorMessage:String = ""
-public var StartHours = ["N/A"]
-public var EndHours = ["N/A"]
+public var StartHours = [STRING.NA_S]
+public var EndHours = [STRING.NA_S]
 public var WeekDaysNamePicker = [
     WeekDay(dayId:0, name:" "),
     WeekDay(dayId:1, name:STRING.MONDAY_S),
@@ -24,7 +24,7 @@ public var BlocColors = [UIColor.systemYellow, UIColor.systemRed,UIColor.systemB
 public func addCourse(name:String, local:String, color:UIColor, start:String, end:String, selectedDay:Int) -> Bool
 {
     let nbBloc = getBlocId(end: end) - getBlocId(start: start)
-    if(name == " ")
+    if(name == "")
     {
         editorErrorMessage = STRING.E_NAME_S
         return true
@@ -34,12 +34,12 @@ public func addCourse(name:String, local:String, color:UIColor, start:String, en
         editorErrorMessage = STRING.E_DAY_S
         return true
     }
-    else if(start == STRING.START_H_PICKER_S)
+    else if(start == STRING.NA_S)
     {
         editorErrorMessage = STRING.E_START_H_S
         return true
     }
-    else if(end == STRING.END_H_PICKER_S)
+    else if(end == STRING.NA_S)
     {
         editorErrorMessage = STRING.E_END_H_S
         return true

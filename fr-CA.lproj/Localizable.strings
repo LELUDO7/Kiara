@@ -34,6 +34,7 @@
 "DAY_PICKER_S" = "Journée :";
 "START_H_PICKER_S" = "Heure de début :";
 "END_H_PICKER_S" = "Heure de fin :";
+"N/A_S" = "N/A";
 
 "ADD_COURSE_S" = "Ajouter un cours";
 
