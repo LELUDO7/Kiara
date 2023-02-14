@@ -19,21 +19,28 @@ struct WeekView: View {
     @State var blocsWednesday = weekCourseBlocs[3]
     @State var blocsThursday = weekCourseBlocs[4]
     @State var blocsFriday = weekCourseBlocs[5]
+    @State var courseBlocHeight = CGFloat(0)
     
     var body: some View {
         
         NavigationStack {
             HStack{
                 
-                
                 VStack{
-                    Text("")
-                        .font(.system(size: CGFloat(textFontSize)))
-                        .fixedSize(horizontal: true, vertical: true)
-                        .multilineTextAlignment(.center)
-                        .frame(width: 33, height: blocHeight)
-                        .frame(maxHeight: .infinity)
-                        .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0))
+                    GeometryReader { proxy in
+                        Text("")
+                            .font(.system(size: CGFloat(textFontSize)))
+                            .fixedSize(horizontal: true, vertical: true)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 33, height: blocHeight)
+                            .frame(maxHeight: .infinity)
+                            .background(GeometryReader { textViewProxy in
+                                Color.clear
+                                    .onAppear {
+                                        courseBlocHeight = CGFloat(textViewProxy.size.height)
+                                    }
+                            })
+                    }
                     ForEach(weekCourseBlocs[0]) { timeBloc in
                         Text(timeBloc.start + "\n" + timeBloc.end)
                             .font(.system(size: CGFloat(textFontSize)))
@@ -62,7 +69,7 @@ struct WeekView: View {
                                 .fixedSize(horizontal: true, vertical: true)
                                 .multilineTextAlignment(.center)
                                 .frame(width: blocWidth, height:
-                                        blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
+                                        courseBlocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
                                 .frame(maxWidth:.infinity)
                                 .frame(maxHeight: .infinity)
                                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
@@ -100,7 +107,7 @@ struct WeekView: View {
                                 .font(.system(size: textFontSize))
                                 .fixedSize(horizontal: true, vertical: true)
                                 .multilineTextAlignment(.center)
-                                .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
+                                .frame(width: blocWidth, height: courseBlocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
                                 .frame(maxWidth:.infinity)
                                 .frame(maxHeight: .infinity)
                                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
@@ -138,7 +145,7 @@ struct WeekView: View {
                                 .font(.system(size: textFontSize))
                                 .fixedSize(horizontal: true, vertical: true)
                                 .multilineTextAlignment(.center)
-                                .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
+                                .frame(width: blocWidth, height: courseBlocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
                                 .frame(maxWidth:.infinity)
                                 .frame(maxHeight: .infinity)
                                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
@@ -176,7 +183,7 @@ struct WeekView: View {
                                 .font(.system(size: textFontSize))
                                 .fixedSize(horizontal: true, vertical: true)
                                 .multilineTextAlignment(.center)
-                                .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
+                                .frame(width: blocWidth, height: courseBlocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
                                 .frame(maxWidth:.infinity)
                                 .frame(maxHeight: .infinity)
                                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
@@ -214,7 +221,7 @@ struct WeekView: View {
                                 .font(.system(size: textFontSize))
                                 .fixedSize(horizontal: true, vertical: true)
                                 .multilineTextAlignment(.center)
-                                .frame(width: blocWidth, height: blocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
+                                .frame(width: blocWidth, height: courseBlocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
                                 .frame(maxWidth:.infinity)
                                 .frame(maxHeight: .infinity)
                                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
