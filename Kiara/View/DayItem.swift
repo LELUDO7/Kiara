@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct DayBlocView: View {
-    @Binding var blocsMonday: [Bloc]
+struct DayItem: View {
+    @Binding var blocs: [Bloc]
     @Binding var courseBlocHeight : CGFloat
+    @State var dayName : String
     var body: some View {
         VStack{
-            Text(STRING.MON_S)
+            Text(dayName)
                 .font(.system(size: dayTextFontSize))
                 .fixedSize(horizontal: true, vertical: true)
                 .multilineTextAlignment(.center)
@@ -20,7 +21,7 @@ struct DayBlocView: View {
                 .frame(maxWidth:.infinity)
                 .frame(maxHeight: .infinity)
                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color.white).opacity(0))
-            ForEach(blocsMonday){bloc in
+            ForEach(blocs){bloc in
                 
                 if let courseBloc = bloc as? CourseBloc{
                     Text(courseBloc.name + "\n" + courseBloc.local)
@@ -38,7 +39,6 @@ struct DayBlocView: View {
                         Text("")
                             .fixedSize(horizontal: true, vertical: true)
                             .multilineTextAlignment(.center)
-                            .frame(width: blocWidth, height: blocHeight)
                             .frame(maxWidth:.infinity)
                             .frame(maxHeight: .infinity)
                             .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0.4))
@@ -47,6 +47,7 @@ struct DayBlocView: View {
                 
                 
             }
+            
             
             
         }

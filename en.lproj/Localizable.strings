@@ -6,7 +6,7 @@
   
 */
 "WEEK_S" = "Week";
-"DAY_S" = "Day";
+"TODAY_S" = "Today";
 "FRIENDS_S" = "Friends";
 
 "ERROR_S" = "Error";
@@ -34,9 +34,11 @@
 "DAY_PICKER_S" = "Day :";
 "START_H_PICKER_S" = "Start time :";
 "END_H_PICKER_S" = "End time :";
+"COURSE_PICKER_S" = "Course :";
 "N/A_S" = "N/A";
 
 "ADD_COURSE_S" = "Add course";
+"DELETE_COURSE_S" = "Delete course";
 
 "C_GRAY_S" = "gray";
 "C_RED_S" = "red";

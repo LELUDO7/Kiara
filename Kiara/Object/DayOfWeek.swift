@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Day:Identifiable{
+public class DayOfWeek:Identifiable {
     public let name:String
     public let array:[Bloc]
     

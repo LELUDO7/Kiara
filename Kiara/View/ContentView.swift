@@ -19,9 +19,9 @@ struct ContentView: View {
                 Image(systemName: "calendar")
                 Text(STRING.WEEK_S)
             }
-            DayView().tabItem {
+            TodayView().tabItem {
                 Image(systemName: "calendar")
-                Text(STRING.DAY_S)
+                Text(STRING.TODAY_S)
             }
             FriendsView().tabItem {
                 Image(systemName: "person.2.fill")

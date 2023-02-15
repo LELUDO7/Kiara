@@ -20,6 +20,12 @@ struct KiaraApp: App {
     }
 }
 
+let textFontSize = CGFloat(12)
+let blocHeight = CGFloat(20)
+let blocWidth = CGFloat(20)
+let dayTextFontSize = CGFloat(17)
+let courseOpacity = 0.8
+
 public let STRING = StringLocal()
 
 public var weekCourseBlocs = [[Bloc]]()

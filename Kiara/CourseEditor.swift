@@ -53,6 +53,7 @@ public func addCourse(name:String, local:String, color:UIColor, start:String, en
     }
     resetStartHours()
     resetEndHours()
+    
     return false
 }
 
@@ -100,14 +101,6 @@ extension UIColor {
         default: return nil
         }
     }
-}
-
-public struct WeekDay: Hashable, Identifiable{
-    public var id: Int{
-        return dayId
-    }
-    var dayId:Int
-    var name:String
 }
 
 public func SetStartHours(selectedDay:Int){

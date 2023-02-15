@@ -9,7 +9,7 @@ import Foundation
 
 public struct StringLocal{
     let WEEK_S = NSLocalizedString("WEEK_S", comment: "")
-    let DAY_S = NSLocalizedString("DAY_S", comment: "")
+    let TODAY_S = NSLocalizedString("TODAY_S", comment: "")
     let FRIENDS_S = NSLocalizedString("FRIENDS_S", comment: "")
     
     let ERROR_S = NSLocalizedString("ERROR_S", comment: "")
@@ -37,9 +37,11 @@ public struct StringLocal{
     let DAY_PICKER_S = NSLocalizedString("DAY_PICKER_S", comment:"")
     let START_H_PICKER_S = NSLocalizedString("START_H_PICKER_S", comment:"")
     let END_H_PICKER_S = NSLocalizedString("END_H_PICKER_S", comment:"")
+    let COURSE_PICKER_S = NSLocalizedString("COURSE_PICKER_S", comment: "")
     let NA_S = NSLocalizedString("N/A_S", comment:"")
     
     let ADD_COURSE_S = NSLocalizedString("ADD_COURSE_S", comment: "")
+    let DELETE_COURSE_S = NSLocalizedString("DELETE_COURSE_S", comment: "")
     
     let C_GRAY_S = NSLocalizedString("C_GRAY_S", comment: "")
     let C_RED_S = NSLocalizedString("C_RED_S", comment: "")

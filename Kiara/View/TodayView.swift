@@ -1,5 +1,5 @@
 //
-//  WeekView.swift
+//  DayView.swift
 //  Kiara
 //
 //  Created by Ludovic Fournier on 2023-02-11.
@@ -7,24 +7,20 @@
 
 import SwiftUI
 
-struct WeekView: View {
+struct TodayView: View {
     @State var blocs = weekCourseBlocs
     @State var courseBlocHeight = CGFloat(0)
     
     @State var showCourseEditor = false
-    
     var body: some View {
-        
         NavigationStack {
             HStack{
-                
                 VStack{
                     GeometryReader { proxy in
                         Text("")
                             .font(.system(size: CGFloat(textFontSize)))
                             .fixedSize(horizontal: true, vertical: true)
                             .multilineTextAlignment(.center)
-                            .frame(height: blocHeight)
                             .frame(maxHeight: .infinity)
                             .background(GeometryReader { textViewProxy in
                                 Color.clear
@@ -38,36 +34,23 @@ struct WeekView: View {
                             .font(.system(size: CGFloat(textFontSize)))
                             .fixedSize(horizontal: true, vertical: true)
                             .multilineTextAlignment(.center)
-                            .frame(height: blocHeight)
                             .frame(maxHeight: .infinity)
-                            .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0))
-                        
                     }
                 }
-                .frame(width:43)
+                .frame(maxWidth: 43)
                 VStack{
-                    DayItem(blocs: $blocs[1], courseBlocHeight: $courseBlocHeight,dayName: STRING.MON_S)
+                    DayItem(blocs: $blocs[getDayId()], courseBlocHeight: $courseBlocHeight, dayName: getDayName(dayId: getDayId()))
                 }
-                VStack{
-                    DayItem(blocs: $blocs[2], courseBlocHeight: $courseBlocHeight, dayName: STRING.TUES_S)
-                }
-                VStack{
-                    DayItem(blocs: $blocs[3], courseBlocHeight: $courseBlocHeight, dayName: STRING.WED_S)
-                }
-                VStack{
-                    DayItem(blocs: $blocs[4], courseBlocHeight: $courseBlocHeight,dayName: STRING.THU_S)
-                }
-                VStack{
-                    DayItem(blocs: $blocs[5], courseBlocHeight: $courseBlocHeight, dayName: STRING.FRI_S)
-                }
+                .frame(maxWidth: .infinity)
             }
             .padding()
             .onAppear(){
                 blocs = weekCourseBlocs
             }
-            .navigationTitle(STRING.WEEK_S)
+            .navigationTitle(STRING.TODAY_S)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
+
                     Button{
                         showCourseEditor = true
                     } label: {
@@ -75,19 +58,17 @@ struct WeekView: View {
                     }
                     .sheet(isPresented: $showCourseEditor,content:  {
                         CourseEditorView().onDisappear(){
-                            blocs = weekCourseBlocs
-                        }
+                                    blocs = weekCourseBlocs
+                                }
                             })
                 }
             }
         }
-        
     }
 }
 
-
-struct WeekView_Previews: PreviewProvider {
+struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        WeekView()
+        TodayView()
     }
 }
