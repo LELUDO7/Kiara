@@ -57,7 +57,7 @@ struct CourseEditorView: View {
                             Text(hour) // 5
                         }
                     }
-                    Button(STRING.ADD_COURSE_S) {
+                    Button(STRING.ADD_S) {
                         isErrorShowing = addCourse(name:name, local:local,color: selectedColors, start: selectedStartHour, end: selectedEndHour, selectedDay:selectedDay.dayId)
                         if(!isErrorShowing)
                         {

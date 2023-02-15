@@ -38,7 +38,9 @@
 "N/A_S" = "N/A";
 
 "ADD_COURSE_S" = "Ajouter un cours";
+"ADD_S" = "Ajouter";
 "DELETE_COURSE_S" = "Supprimer un cours";
+"DELETE_S" = "Supprimer";
 
 "C_GRAY_S" = "gris";
 "C_RED_S" = "rouge";

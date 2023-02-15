@@ -41,7 +41,9 @@ public struct StringLocal{
     let NA_S = NSLocalizedString("N/A_S", comment:"")
     
     let ADD_COURSE_S = NSLocalizedString("ADD_COURSE_S", comment: "")
+    let ADD_S = NSLocalizedString("ADD_S", comment: "")
     let DELETE_COURSE_S = NSLocalizedString("DELETE_COURSE_S", comment: "")
+    let DELETE_S = NSLocalizedString("DELETE_S", comment: "")
     
     let C_GRAY_S = NSLocalizedString("C_GRAY_S", comment: "")
     let C_RED_S = NSLocalizedString("C_RED_S", comment: "")

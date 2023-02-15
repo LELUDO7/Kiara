@@ -23,14 +23,32 @@ struct DeleteCourseView: View {
                             Text(day.name) // 5
                         }
                     }
+                    .onChange(of: selectedDay) { newValue in
+                        updateCourseOfDay(selectedDay: selectedDay.dayId)
+                        courseOfDay = courseOfDayPicker
+                        selectedCourse = courseOfDayPicker[0]
+                    }
                     Picker(STRING.COURSE_PICKER_S, selection: $selectedCourse) { // 3
                         ForEach(courseOfDay, id: \.self) { course in // 4
                             Text(course.name + " " + course.StartHour ) // 5
                         }
                     }
+                    Button(STRING.DELETE_S) {
+                        deleteCourse(courseDay: selectedDay.dayId, courseStartHour: selectedCourse.StartHour)
+                        courseOfDay = courseOfDayPicker
+                        selectedCourse = courseOfDayPicker[0]
+                        selectedDay = WeekDaysNamePicker[0]
+                    }
+                    .foregroundColor(.red)
+                    
                 }
             }
             .navigationTitle(STRING.DELETE_COURSE_S)
+            .onDisappear(){
+                courseOfDay = courseOfDayPicker
+                selectedCourse = courseOfDayPicker[0]
+                selectedDay = WeekDaysNamePicker[0]
+            }
         }
     }
 }

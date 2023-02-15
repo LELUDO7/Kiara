@@ -38,7 +38,10 @@
 "N/A_S" = "N/A";
 
 "ADD_COURSE_S" = "Add course";
+"ADD_S" = "Add";
 "DELETE_COURSE_S" = "Delete course";
+"DELETE_S" = "Delete";
+
 
 "C_GRAY_S" = "gray";
 "C_RED_S" = "red";
