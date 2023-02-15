@@ -10,12 +10,17 @@ import Foundation
 public func getDayId() -> Int
 {
     let dayOfWeek = Calendar.current.component(.weekday, from: Date())
+    if(dayOfWeek-1 > 5)
+    {
+        return 1
+    }
     return dayOfWeek-1
 }
 
-public func getDayName(dayId:Int) -> String
+public func getDayName() -> String
 {
-    switch dayId{
+    let dayOfWeek = Calendar.current.component(.weekday, from: Date())-1
+    switch dayOfWeek{
     case 1:
         return STRING.MONDAY_S
     case 2:

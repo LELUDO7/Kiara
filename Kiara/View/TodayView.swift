@@ -39,7 +39,7 @@ struct TodayView: View {
                 }
                 .frame(maxWidth: 43)
                 VStack{
-                    DayItem(blocs: $blocs[getDayId()], courseBlocHeight: $courseBlocHeight, dayName: getDayName(dayId: getDayId()))
+                    DayItem(blocs: $blocs[getDayId()], courseBlocHeight: $courseBlocHeight, dayName: getDayName())
                 }
                 .frame(maxWidth: .infinity)
             }

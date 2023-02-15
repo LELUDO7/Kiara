@@ -1,0 +1,55 @@
+/* 
+  Localizable.strings
+  Kiara
+
+  Created by Ludovic Fournier on 2023-02-13.
+  
+*/
+"WEEK_S" = "Semaine";
+"TODAY_S" = "Aujourd'hui";
+"FRIENDS_S" = "Amis";
+
+"ERROR_S" = "Erreur";
+"E_NAME_S" = "Entrer un nom";
+"E_DAY_S" = "Selectionner une journée";
+"E_START_H_S" = "Selectionner une heure de début";
+"E_END_H_S" = "Selectionner une heure de fin";
+
+"MON_S" = "Lun";
+"TUES_S" = "Mar";
+"WED_S" = "Mer";
+"THU_S" = "Jeu";
+"FRI_S" = "Ven";
+
+"MONDAY_S" = "Lundi";
+"TUESDAY_S" = "Mardi";
+"WEDNESDAY_S" = "Mercredi";
+"THURSDAY_S" = "Jeudi";
+"FRIDAY_S" = "Vendredi";
+
+"NAME_S" = "Nom";
+"LOCAL_S" = "Local";
+
+"COLOR_PICKER_S" = "Couleur :";
+"DAY_PICKER_S" = "Journée :";
+"START_H_PICKER_S" = "Heure de début :";
+"END_H_PICKER_S" = "Heure de fin :";
+"COURSE_PICKER_S" = "Cours :";
+"N/A_S" = "N/A";
+
+"ADD_COURSE_S" = "Ajouter un cours";
+"ADD_S" = "Ajouter";
+"DELETE_COURSE_S" = "Supprimer un cours";
+"DELETE_S" = "Supprimer";
+
+"C_GRAY_S" = "gris";
+"C_RED_S" = "rouge";
+"C_GREEN_S" = "vert";
+"C_BLUE_S" = "bleu";
+"C_CYAN_S" = "cyan";
+"C_YELLOW_S" = "jaune";
+"C_ORANGE_S" = "orange";
+"C_PINK_S" = "rose";
+"C_PURPLE_S" = "violet";
+"C_BROWN_S" =  "brun";
+

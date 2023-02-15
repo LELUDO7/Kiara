@@ -39,6 +39,7 @@
 		E9063FD3299C80B30030DC96 /* DeleteCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCourseView.swift; sourceTree = "<group>"; };
 		E9063FD5299C89600030DC96 /* DeleteCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCourse.swift; sourceTree = "<group>"; };
 		E9063FD7299C8C5C0030DC96 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		E9063FDE299D6CE40030DC96 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9106386299B155400C5FC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9106388299B155900C5FC7F /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; usesTabs = 0; };
 		E9106389299B1A9A00C5FC7F /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
@@ -184,6 +185,7 @@
 				en,
 				Base,
 				"fr-CA",
+				fr,
 			);
 			mainGroup = E9A84910298A1E9900F205CB;
 			productRefGroup = E9A8491A298A1E9900F205CB /* Products */;
@@ -244,6 +246,7 @@
 			children = (
 				E9106386299B155400C5FC7F /* en */,
 				E9106388299B155900C5FC7F /* fr-CA */,
+				E9063FDE299D6CE40030DC96 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
