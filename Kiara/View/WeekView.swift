@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WeekView: View {
+    
     @State var blocs = weekCourseBlocs
     @State var courseBlocHeight = CGFloat(0)
     
@@ -80,6 +81,7 @@ struct WeekView: View {
                             })
                 }
             }
+
         }
         
     }

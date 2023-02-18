@@ -15,11 +15,12 @@
 		E9063FD8299C8C5C0030DC96 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9063FD7299C8C5C0030DC96 /* Course.swift */; };
 		E9106385299B155400C5FC7F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9106387299B155400C5FC7F /* Localizable.strings */; };
 		E910638A299B1A9A00C5FC7F /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9106389299B1A9A00C5FC7F /* LocalizableString.swift */; };
+		E97F11A529A07818004ED048 /* Kiara_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F11A429A07818004ED048 /* Kiara_API.swift */; };
+		E97F11A729A07DA3004ED048 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97F11A629A07DA3004ED048 /* Launch Screen.storyboard */; };
 		E9A8491D298A1E9900F205CB /* KiaraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8491C298A1E9900F205CB /* KiaraApp.swift */; };
 		E9A8491F298A1E9900F205CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8491E298A1E9900F205CB /* ContentView.swift */; };
 		E9A84921298A1E9A00F205CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A84920298A1E9A00F205CB /* Assets.xcassets */; };
 		E9A84924298A1E9A00F205CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A84923298A1E9A00F205CB /* Preview Assets.xcassets */; };
-		E9A8492B298A1EB500F205CB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A8492A298A1EB500F205CB /* Launch Screen.storyboard */; };
 		E9AF40242996C9CD00D7BCE3 /* Bloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF40232996C9CD00D7BCE3 /* Bloc.swift */; };
 		E9AF40272996CA9300D7BCE3 /* CourseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF40262996CA9300D7BCE3 /* CourseBloc.swift */; };
 		E9AF40292996CAC300D7BCE3 /* TimeBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF40282996CAC300D7BCE3 /* TimeBloc.swift */; };
@@ -43,12 +44,13 @@
 		E9106386299B155400C5FC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9106388299B155900C5FC7F /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; usesTabs = 0; };
 		E9106389299B1A9A00C5FC7F /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
+		E97F11A429A07818004ED048 /* Kiara_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiara_API.swift; sourceTree = "<group>"; };
+		E97F11A629A07DA3004ED048 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E9A84919298A1E9900F205CB /* Kiara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A8491C298A1E9900F205CB /* KiaraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiaraApp.swift; sourceTree = "<group>"; };
 		E9A8491E298A1E9900F205CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9A84920298A1E9A00F205CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9A84923298A1E9A00F205CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E9A8492A298A1EB500F205CB /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E9AF40232996C9CD00D7BCE3 /* Bloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bloc.swift; sourceTree = "<group>"; };
 		E9AF40262996CA9300D7BCE3 /* CourseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBloc.swift; sourceTree = "<group>"; };
 		E9AF40282996CAC300D7BCE3 /* TimeBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBloc.swift; sourceTree = "<group>"; };
@@ -75,8 +77,8 @@
 		E9A84910298A1E9900F205CB = {
 			isa = PBXGroup;
 			children = (
+				E97F11A629A07DA3004ED048 /* Launch Screen.storyboard */,
 				E9106387299B155400C5FC7F /* Localizable.strings */,
-				E9A8492A298A1EB500F205CB /* Launch Screen.storyboard */,
 				E9A8491B298A1E9900F205CB /* Kiara */,
 				E9A8491A298A1E9900F205CB /* Products */,
 			);
@@ -98,10 +100,11 @@
 				E9063FCF299C37130030DC96 /* Today.swift */,
 				E9AF403E29988D5000D7BCE3 /* CourseEditor.swift */,
 				E9063FD5299C89600030DC96 /* DeleteCourse.swift */,
-				E9106389299B1A9A00C5FC7F /* LocalizableString.swift */,
-				E9AF40252996C9FD00D7BCE3 /* Object */,
+				E9AF40252996C9FD00D7BCE3 /* models */,
 				E9A84920298A1E9A00F205CB /* Assets.xcassets */,
 				E9A84922298A1E9A00F205CB /* Preview Content */,
+				E97F11A429A07818004ED048 /* Kiara_API.swift */,
+				E9106389299B1A9A00C5FC7F /* LocalizableString.swift */,
 			);
 			path = Kiara;
 			sourceTree = "<group>";
@@ -114,7 +117,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E9AF40252996C9FD00D7BCE3 /* Object */ = {
+		E9AF40252996C9FD00D7BCE3 /* models */ = {
 			isa = PBXGroup;
 			children = (
 				E9AF40232996C9CD00D7BCE3 /* Bloc.swift */,
@@ -125,7 +128,7 @@
 				E9063FD1299C3B5E0030DC96 /* WeekDay.swift */,
 				E9063FD7299C8C5C0030DC96 /* Course.swift */,
 			);
-			path = Object;
+			path = models;
 			sourceTree = "<group>";
 		};
 		E9AF402F2998126000D7BCE3 /* View */ = {
@@ -202,9 +205,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9A8492B298A1EB500F205CB /* Launch Screen.storyboard in Resources */,
 				E9106385299B155400C5FC7F /* Localizable.strings in Resources */,
 				E9A84924298A1E9A00F205CB /* Preview Assets.xcassets in Resources */,
+				E97F11A729A07DA3004ED048 /* Launch Screen.storyboard in Resources */,
 				E9A84921298A1E9A00F205CB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +222,7 @@
 				E9AF403D29988CEA00D7BCE3 /* CourseEditoView.swift in Sources */,
 				E9AF403F29988D5000D7BCE3 /* CourseEditor.swift in Sources */,
 				E9063FD4299C80B30030DC96 /* DeleteCourseView.swift in Sources */,
+				E97F11A529A07818004ED048 /* Kiara_API.swift in Sources */,
 				E9063FD2299C3B5E0030DC96 /* WeekDay.swift in Sources */,
 				E9AF40272996CA9300D7BCE3 /* CourseBloc.swift in Sources */,
 				E9AF40312998127600D7BCE3 /* TodayView.swift in Sources */,

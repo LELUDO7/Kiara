@@ -11,7 +11,6 @@ import UIKit
 struct ContentView: View {
     var body: some View {
         
-        
         TabView {
             
             
@@ -29,6 +28,8 @@ struct ContentView: View {
             }
             
             
+        }.task {
+            await getData(from: url)
         }
     }
 }

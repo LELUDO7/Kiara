@@ -9,12 +9,12 @@ import Foundation
 
 public func getDayId() -> Int
 {
-    let dayOfWeek = Calendar.current.component(.weekday, from: Date())
-    if(dayOfWeek-1 > 5)
+    let dayOfWeek = Calendar.current.component(.weekday, from: Date())-1
+    if(dayOfWeek >= 6)
     {
         return 1
     }
-    return dayOfWeek-1
+    return dayOfWeek
 }
 
 public func getDayName() -> String
