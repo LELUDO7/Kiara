@@ -8,28 +8,46 @@
 import SwiftUI
 import UIKit
 
+
+
 struct ContentView: View {
+    @AppStorage("userId") var userId: String = ""
+    
+    @State var showSignInView = true
+ 
+    private var isSignedIn: Bool{
+        userId.isEmpty
+    }
+    
     var body: some View {
         
-        TabView {
-            
-            
-            WeekView().tabItem {
-                Image(systemName: "calendar")
-                Text(STRING.WEEK_S)
+        if showSignInView
+        {
+            SignInView(showSignInView: $showSignInView).task {
+                showSignInView = isSignedIn
             }
-            TodayView().tabItem {
-                Image(systemName: "calendar")
-                Text(STRING.TODAY_S)
-            }
-            FriendsView().tabItem {
-                Image(systemName: "person.2.fill")
-                Text(STRING.FRIENDS_S)
-            }
+        }else{
+            TabView {
+                
+                
+                WeekView().tabItem {
+                    Image(systemName: "calendar")
+                    Text(STRING.WEEK_S)
+                }
+                TodayView().tabItem {
+                    Image(systemName: "calendar")
+                    Text(STRING.TODAY_S)
+                }
+                FriendsView().tabItem {
+                    Image(systemName: "person.2.fill")
+                    Text(STRING.FRIENDS_S)
+                }
+                UserView().tabItem {
+                    Image(systemName: "person.fill")
+                    Text("User")
+                }
+        }
             
-            
-        }.task {
-            await getData(from: url)
         }
     }
 }
