@@ -42,11 +42,14 @@ struct ContentView: View {
                     Image(systemName: "person.2.fill")
                     Text(STRING.FRIENDS_S)
                 }
-                UserView().tabItem {
+                UserView(showSignInView: $showSignInView).tabItem {
                     Image(systemName: "person.fill")
                     Text("User")
                 }
-        }
+            }.task {
+                API.getUser(userId: self.userId, completion: {_ in
+                })
+            }
             
         }
     }

@@ -31,6 +31,8 @@ let courseOpacity = 0.8
 
 let userDefaults = UserDefaults.standard
 
+public let API = KiaraAPI()
+
 public let STRING = StringLocal()
 
 public var weekCourseBlocs = [[Bloc]]()
