@@ -13,6 +13,7 @@ import Foundation
 struct KiaraApp: App {
     init() {
         KIARA.loadScheduleTemplate()
+        KIARA.loadSchedule()
     }
     var body: some Scene {
         WindowGroup {
@@ -21,9 +22,11 @@ struct KiaraApp: App {
     }
 }
 
-public let API = KiaraAPI()
+public let TOOLS = Tools()
 
 public let STRING = StringLocal()
 
 public let KIARA = Kiara()
+
+public let API = KiaraAPI()
 

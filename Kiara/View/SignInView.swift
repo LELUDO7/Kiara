@@ -10,7 +10,7 @@ import SwiftUI
 struct SignInView: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var showSignInView : Bool
-    @State var APIOK = false
+    @Binding var APIOK : Bool
     
     @AppStorage("userId") var userId: String = ""
     @AppStorage("firstName") var firstName: String = ""
@@ -45,17 +45,11 @@ struct SignInView: View {
                                     self.userId = userId
                                     API.checkIfUserExist(userid: userId, completion: { exist in
                                         
-                                        if exist{
-                                            API.getUser(userId: self.userId, completion: {_ in
-                                                showSignInView = false
-                                            })
-                                        }
-                                        else
-                                        {
+                                        if !exist{
                                             API.creatUser()
-                                            showSignInView = false
+                                            
                                         }
-                                        
+                                        showSignInView = false
                                     })
                                     
                                 default:
@@ -91,15 +85,6 @@ struct SignInView: View {
                 
             }
             .edgesIgnoringSafeArea(.all)
-            .task {
-                API.checkAPI{ success in
-                    if success{
-                        APIOK = true
-                    }
-                }
-            }
-            
-        
         
     }
 }

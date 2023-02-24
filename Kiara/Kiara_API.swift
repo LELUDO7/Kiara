@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 public class KiaraAPI {
-    private let url = "http://localhost:7187/";
+    private let url = "http://192.168.135.247:7187/";
     
     func checkAPI(completion: @escaping (Bool) -> Void) {
         let url = URL(string: url + "apistatus/")!
@@ -64,7 +64,7 @@ public class KiaraAPI {
                     }
                     
                     if let courseBloc = bloc as? CourseBloc{
-                        scheduleBloc = ["name": courseBloc.name, "local": courseBloc.local,"nbBloc": courseBloc.nbBloc, "display":true, "color":getColorName(color: courseBloc.color)]
+                        scheduleBloc = ["name": courseBloc.name, "local": courseBloc.local,"nbBloc": courseBloc.nbBloc, "display":true, "color": TOOLS.getColorName(color: courseBloc.color)]
                     }
                     
                     day.append(scheduleBloc)
@@ -185,7 +185,7 @@ public class KiaraAPI {
                             }
                             else
                             {
-                                KIARA.schedule[i][u] = CourseBloc(start: bloc.start, end: bloc.end, name: responseBloc.name, local: responseBloc.local, color: self.getSystemColor(color: responseBloc.color), nbBloc: responseBloc.nbBloc)
+                                KIARA.schedule[i][u] = CourseBloc(start: bloc.start, end: bloc.end, name: responseBloc.name, local: responseBloc.local, color: TOOLS.getSystemColor(color: responseBloc.color), nbBloc: responseBloc.nbBloc)
                             }
                             u += 1
                         }
@@ -199,6 +199,7 @@ public class KiaraAPI {
             }
         }
         task.resume()
+        
         
     }
     
@@ -219,60 +220,7 @@ public class KiaraAPI {
         let _id : String
     }
     
-    private func getColorName(color:UIColor) -> String{
-        switch color{
-        case UIColor.systemGray:
-            return "gray"
-        case UIColor.systemRed:
-            return "red"
-        case UIColor.systemGreen:
-            return "green"
-        case UIColor.systemBlue:
-            return "blue"
-        case UIColor.systemCyan:
-            return "cyan"
-        case UIColor.systemYellow:
-            return "yellow"
-        case UIColor.systemOrange:
-            return "orange"
-        case UIColor.systemPink:
-            return "pink"
-        case UIColor.systemPurple:
-            return "purple"
-        case UIColor.systemBrown:
-            return "brown"
-        default:
-            return "White"
-        }
-    }
     
-    private func getSystemColor(color:String) -> UIColor
-    {
-        switch color{
-        case "gray":
-            return UIColor.systemGray
-        case "red":
-            return UIColor.systemRed
-        case "green":
-            return UIColor.systemGreen
-        case "blue":
-            return UIColor.systemBlue
-        case "cyan":
-            return UIColor.systemCyan
-        case "yellow":
-            return UIColor.systemYellow
-        case "orange":
-            return UIColor.systemOrange
-        case "pink":
-            return UIColor.systemPink
-        case "purple":
-            return UIColor.systemPurple
-        case "brown":
-            return UIColor.systemBrown
-        default:
-            return UIColor.white
-        }
-    }
 }
 
 
