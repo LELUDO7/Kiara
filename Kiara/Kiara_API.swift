@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 public class KiaraAPI {
-    private let url = "http://192.168.135.247:7187/";
+    private let url = "http://anthony.serveminecraft.net:7187/";
     
     func checkAPI(completion: @escaping (Bool) -> Void) {
         let url = URL(string: url + "apistatus/")!
