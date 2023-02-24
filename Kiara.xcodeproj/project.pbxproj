@@ -16,6 +16,7 @@
 		E907801829A40291004F8C84 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907801729A40291004F8C84 /* SignInView.swift */; };
 		E9106385299B155400C5FC7F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9106387299B155400C5FC7F /* Localizable.strings */; };
 		E910638A299B1A9A00C5FC7F /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9106389299B1A9A00C5FC7F /* LocalizableString.swift */; };
+		E93D843229A867060080B9E4 /* Kiara.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D843129A867060080B9E4 /* Kiara.swift */; };
 		E97F11A529A07818004ED048 /* Kiara_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F11A429A07818004ED048 /* Kiara_API.swift */; };
 		E97F11A729A07DA3004ED048 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97F11A629A07DA3004ED048 /* Launch Screen.storyboard */; };
 		E9A8491D298A1E9900F205CB /* KiaraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8491C298A1E9900F205CB /* KiaraApp.swift */; };
@@ -62,6 +63,7 @@
 		E9106386299B155400C5FC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9106388299B155900C5FC7F /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; usesTabs = 0; };
 		E9106389299B1A9A00C5FC7F /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
+		E93D843129A867060080B9E4 /* Kiara.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiara.swift; sourceTree = "<group>"; };
 		E97F11A429A07818004ED048 /* Kiara_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiara_API.swift; sourceTree = "<group>"; };
 		E97F11A629A07DA3004ED048 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E9A84919298A1E9900F205CB /* Kiara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiara.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,12 +154,13 @@
 			isa = PBXGroup;
 			children = (
 				E907801A29A42CDB004F8C84 /* Kiara.entitlements */,
-				E9AF402F2998126000D7BCE3 /* View */,
 				E9A8491C298A1E9900F205CB /* KiaraApp.swift */,
+				E9AF402F2998126000D7BCE3 /* View */,
 				E9063FCF299C37130030DC96 /* Today.swift */,
 				E9AF403E29988D5000D7BCE3 /* CourseEditor.swift */,
 				E9063FD5299C89600030DC96 /* DeleteCourse.swift */,
 				E9AF40252996C9FD00D7BCE3 /* models */,
+				E93D843129A867060080B9E4 /* Kiara.swift */,
 				E97F11A429A07818004ED048 /* Kiara_API.swift */,
 				E9106389299B1A9A00C5FC7F /* LocalizableString.swift */,
 				E9A84920298A1E9A00F205CB /* Assets.xcassets */,
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E93D843229A867060080B9E4 /* Kiara.swift in Sources */,
 				E9AF403D29988CEA00D7BCE3 /* CourseEditoView.swift in Sources */,
 				E9AF403F29988D5000D7BCE3 /* CourseEditor.swift in Sources */,
 				E9063FD4299C80B30030DC96 /* DeleteCourseView.swift in Sources */,

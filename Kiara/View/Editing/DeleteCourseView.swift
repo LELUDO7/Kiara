@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DeleteCourseView: View {
-    @State var weekBlocs = weekCourseBlocs
+    @State var weekBlocs = KIARA.schedule
     @State var selectedDay = WeekDaysNamePicker[0]
     
     @State var selectedCourse = courseOfDayPicker[0]

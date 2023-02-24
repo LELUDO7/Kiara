@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WeekView: View {
     
-    @State var blocs = weekCourseBlocs
+    @State var blocs = KIARA.schedule
     @State var courseBlocHeight = CGFloat(0)
     
     @State var showCourseEditor = false
@@ -22,10 +22,10 @@ struct WeekView: View {
                 VStack{
                     GeometryReader { proxy in
                         Text("")
-                            .font(.system(size: CGFloat(textFontSize)))
+                            .font(.system(size: CGFloat(KIARA.textFontSize)))
                             .fixedSize(horizontal: true, vertical: true)
                             .multilineTextAlignment(.center)
-                            .frame(height: blocHeight)
+                            .frame(height: KIARA.blocHeight)
                             .frame(maxHeight: .infinity)
                             .background(GeometryReader { textViewProxy in
                                 Color.clear
@@ -36,10 +36,10 @@ struct WeekView: View {
                     }
                     ForEach(blocs[0]) { timeBloc in
                         Text(timeBloc.start + "\n" + timeBloc.end)
-                            .font(.system(size: CGFloat(textFontSize)))
+                            .font(.system(size: CGFloat(KIARA.textFontSize)))
                             .fixedSize(horizontal: true, vertical: true)
                             .multilineTextAlignment(.center)
-                            .frame(height: blocHeight)
+                            .frame(height: KIARA.blocHeight)
                             .frame(maxHeight: .infinity)
                             .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: .label)).opacity(0))
                         
@@ -64,7 +64,7 @@ struct WeekView: View {
             }
             .padding()
             .onAppear(){
-                blocs = weekCourseBlocs
+                blocs = KIARA.schedule
             }
             .navigationTitle(STRING.WEEK_S)
             .toolbar {
@@ -76,7 +76,7 @@ struct WeekView: View {
                     }
                     .sheet(isPresented: $showCourseEditor,content:  {
                         CourseEditorView().onDisappear(){
-                            blocs = weekCourseBlocs
+                            blocs = KIARA.schedule
                         }
                             })
                 }

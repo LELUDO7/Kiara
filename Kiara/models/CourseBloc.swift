@@ -20,4 +20,6 @@ public class CourseBloc: Bloc {
         self.local = local
         super.init(start: start, end: end)
     }
+    
+    
 }

@@ -44,15 +44,17 @@ public func addCourse(name:String, local:String, color:UIColor, start:String, en
         editorErrorMessage = STRING.E_END_H_S
         return true
     }
-    weekCourseBlocs[selectedDay][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: nbBloc)
+    KIARA.schedule[selectedDay][getBlocId(start: start)] = CourseBloc(start: start, end: end, name: name, local: local, color: color, nbBloc: nbBloc)
     if(nbBloc > 0)
     {
         for i in 1...nbBloc {
-            weekCourseBlocs[selectedDay][getBlocId(start: start)+i] = EmptyBloc(start: start, end: end, display: false)
+            KIARA.schedule[selectedDay][getBlocId(start: start)+i] = EmptyBloc(start: start, end: end, display: false)
         }
     }
     resetStartHours()
     resetEndHours()
+    
+    API.updateUserSchedule(userid: KIARA.user.string(forKey: "userId")!)
     
     return false
 }
@@ -60,7 +62,7 @@ public func addCourse(name:String, local:String, color:UIColor, start:String, en
 private func getBlocId(start:String) -> Int
 {
     var i = 0
-    for bloc in weekCourseBlocs[0]
+    for bloc in KIARA.schedule[0]
     {
         if(bloc.start == start)
         {
@@ -74,7 +76,7 @@ private func getBlocId(start:String) -> Int
 private func getBlocId(end:String) -> Int
 {
     var i = 0
-    for bloc in weekCourseBlocs[0]
+    for bloc in KIARA.schedule[0]
     {
         if(bloc.end == end)
         {
@@ -107,7 +109,7 @@ public func SetStartHours(selectedDay:Int){
     resetStartHours()
     if(selectedDay == 0){ return }
     
-    for bloc in weekCourseBlocs[selectedDay]{
+    for bloc in KIARA.schedule[selectedDay]{
         if let emptyBloc = bloc as? EmptyBloc{
             if(emptyBloc.display){
                 StartHours.append(emptyBloc.start)
@@ -122,7 +124,7 @@ public func SetEndHours(selectedDay:Int, start:String){
     resetEndHours()
     if(selectedDay == 0){ return }
     
-    for bloc in weekCourseBlocs[selectedDay]{
+    for bloc in KIARA.schedule[selectedDay]{
         if let emptyBloc = bloc as? EmptyBloc{
             if(emptyBloc.display && validateEndHour(start: getBlocId(start: start), end: getBlocId(end: bloc.end), day: selectedDay)){
                 EndHours.append(emptyBloc.end)
@@ -135,7 +137,7 @@ public func validateEndHour(start:Int, end:Int, day:Int) ->Bool
 {
     var i = 0
     var u = false
-    for bloc in weekCourseBlocs[day]
+    for bloc in KIARA.schedule[day]
     {
         if(i==start)
         {

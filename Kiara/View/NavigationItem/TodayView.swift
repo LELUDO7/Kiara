@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TodayView: View {
-    @State var blocs = weekCourseBlocs
+    @State var blocs = KIARA.schedule
     @State var courseBlocHeight = CGFloat(0)
     
     @State var showCourseEditor = false
@@ -18,7 +18,7 @@ struct TodayView: View {
                 VStack{
                     GeometryReader { proxy in
                         Text("")
-                            .font(.system(size: CGFloat(textFontSize)))
+                            .font(.system(size: CGFloat(KIARA.textFontSize)))
                             .fixedSize(horizontal: true, vertical: true)
                             .multilineTextAlignment(.center)
                             .frame(maxHeight: .infinity)
@@ -31,7 +31,7 @@ struct TodayView: View {
                     }
                     ForEach(blocs[0]) { timeBloc in
                         Text(timeBloc.start + "\n" + timeBloc.end)
-                            .font(.system(size: CGFloat(textFontSize)))
+                            .font(.system(size: CGFloat(KIARA.textFontSize)))
                             .fixedSize(horizontal: true, vertical: true)
                             .multilineTextAlignment(.center)
                             .frame(maxHeight: .infinity)
@@ -45,7 +45,7 @@ struct TodayView: View {
             }
             .padding()
             .onAppear(){
-                blocs = weekCourseBlocs
+                blocs = KIARA.schedule
             }
             .navigationTitle(STRING.TODAY_S)
             .toolbar {
@@ -58,7 +58,7 @@ struct TodayView: View {
                     }
                     .sheet(isPresented: $showCourseEditor,content:  {
                         CourseEditorView().onDisappear(){
-                                    blocs = weekCourseBlocs
+                            blocs = KIARA.schedule
                                 }
                             })
                 }

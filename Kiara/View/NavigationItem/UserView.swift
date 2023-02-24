@@ -23,7 +23,8 @@ struct UserView: View {
                     userId = ""
                     firstName = ""
                     lastName = ""
-                    loadScheduleTemplate(establishmentNameId: 1)
+                    KIARA.schedule.removeAll()
+                    KIARA.loadScheduleTemplate()
                 }
             }
             

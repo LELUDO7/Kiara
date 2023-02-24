@@ -69,6 +69,7 @@ struct CourseEditorView: View {
                             local = ""
                         }
                     }
+                    
                 }
                 
             }

@@ -14,10 +14,10 @@ struct DayItem: View {
     var body: some View {
         VStack{
             Text(dayName)
-                .font(.system(size: dayTextFontSize))
+                .font(.system(size: KIARA.dayTextFontSize))
                 .fixedSize(horizontal: true, vertical: true)
                 .multilineTextAlignment(.center)
-                .frame(width: blocWidth, height: blocHeight)
+                .frame(width: KIARA.blocWidth, height: KIARA.blocHeight)
                 .frame(maxWidth:.infinity)
                 .frame(maxHeight: .infinity)
                 .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color.white).opacity(0))
@@ -25,14 +25,14 @@ struct DayItem: View {
                 
                 if let courseBloc = bloc as? CourseBloc{
                     Text(courseBloc.name + "\n" + courseBloc.local)
-                        .font(.system(size: textFontSize))
+                        .font(.system(size: KIARA.textFontSize))
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)
-                        .frame(width: blocWidth, height:
+                        .frame(width: KIARA.blocWidth, height:
                                 courseBlocHeight*(CGFloat(courseBloc.nbBloc)+1)+(CGFloat(courseBloc.nbBloc)*8))
                         .frame(maxWidth:.infinity)
                         .frame(maxHeight: .infinity)
-                        .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(courseOpacity))
+                        .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(KIARA.courseOpacity))
                 }else if let emptyBloc = bloc as? EmptyBloc{
                     if(emptyBloc.display)
                     {
