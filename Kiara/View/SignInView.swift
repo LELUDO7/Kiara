@@ -73,7 +73,7 @@ struct SignInView: View {
                             .frame(width: .infinity)
                             .cornerRadius(8)
                             .padding()
-                            .overlay( Label("Check your internet connection", systemImage: "icloud.slash.fill")
+                            .overlay( Label(STRING.FAULT_NETWORK, systemImage: "icloud.slash.fill")
                                 .foregroundColor(colorScheme != .dark ? .white : .black))
                        
                         

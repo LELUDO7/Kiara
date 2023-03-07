@@ -54,5 +54,8 @@
 "C_PURPLE_S" = "purple";
 "C_BROWN_S" =  "brown";
 
+"LOG_OUT" = "Log out";
+"FAULT_NETWORK" = "Check your internet connection";
+
 
 

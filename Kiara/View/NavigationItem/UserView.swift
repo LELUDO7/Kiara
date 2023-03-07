@@ -18,7 +18,7 @@ struct UserView: View {
         VStack{
             Form{
                 Text(firstName + " " + lastName)
-                Button("Log Out"){
+                Button(STRING.LOG_OUT){
                     showSignInView = true
                     userId = ""
                     firstName = ""

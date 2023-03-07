@@ -147,6 +147,45 @@ public class KiaraAPI {
         task.resume()
     }
     
+    func getAllUserInfo(searchContent : String, completion: @escaping (Bool) -> Void) {
+        guard let url = URL(string: url + "userinfo/" + searchContent) else {
+            print("invalid url")
+            return
+        }
+        
+        let session = URLSession.shared
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let data = data else {
+                print(NSError(domain: "myDomain", code: -1, userInfo: nil))
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                FRIENDS.currentResearchOfUser.removeAll()
+                let myResponse = try decoder.decode([ResponseUserInfo].self, from: data)
+                
+                for userInfo in myResponse {
+                    FRIENDS.currentResearchOfUser.append(UserInfo(idUser: userInfo.idUser, firstName: userInfo.firstName, lastName: userInfo.lastName))
+                }
+                completion(true)
+            } catch {
+                print(error)
+            }
+        }
+        task.resume()
+        
+        
+    }
     
     func getUser(userId: String, completion: @escaping (Bool) -> Void) {
         let url = URL(string: url + "user/" + userId)!
@@ -169,10 +208,10 @@ public class KiaraAPI {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
+                
                 let myResponse = try decoder.decode(Response.self, from: data)
                 KIARA.user.set(myResponse.firstName ,forKey: "firstName")
                 KIARA.user.set(myResponse.lastName ,forKey: "lastName")
-                print(myResponse)
                 var i = 0
                 for weekDay in KIARA.schedule{
                     if(i>0)
@@ -201,6 +240,12 @@ public class KiaraAPI {
         task.resume()
         
         
+    }
+    
+    public struct ResponseUserInfo: Codable {
+        let idUser : String
+        let firstName : String
+        let lastName : String
     }
     
     public struct Response: Codable{

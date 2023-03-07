@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct FriendsView: View {
+    @State var showFriendsSrch = false
     var body: some View {
-        Text("FriendsView")
+        NavigationStack {
+            HStack{
+                
+            }
+            .navigationTitle(STRING.FRIENDS_S)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+
+                    Button{
+                        showFriendsSrch = true
+                    } label: {
+                        Image(systemName: "person.fill.badge.plus")
+                    }
+                    .sheet(isPresented: $showFriendsSrch,content:  {
+                        FriendsSrchView(showThisView: $showFriendsSrch)
+                            })
+                }
+            }
+        }
+        
+        
     }
 }
 

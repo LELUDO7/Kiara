@@ -24,7 +24,7 @@ struct DayItem: View {
             ForEach(blocs){bloc in
                 
                 if let courseBloc = bloc as? CourseBloc{
-                    Text(courseBloc.name + "\n" + courseBloc.local)
+                    Text(courseBloc.name.prefix(8) + "\n" + courseBloc.local)
                         .font(.system(size: KIARA.textFontSize))
                         .fixedSize(horizontal: true, vertical: true)
                         .multilineTextAlignment(.center)

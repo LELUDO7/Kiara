@@ -53,3 +53,5 @@
 "C_PURPLE_S" = "violet";
 "C_BROWN_S" =  "brun";
 
+"LOG_OUT" = "Se déconecter";
+"FAULT_NETWORK" = "Vérifier votre connexion internet";

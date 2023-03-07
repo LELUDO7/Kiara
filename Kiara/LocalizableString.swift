@@ -55,6 +55,9 @@ public struct StringLocal{
     let C_PINK_S = NSLocalizedString("C_PINK_S", comment: "")
     let C_PURPLE_S = NSLocalizedString("C_PURPLE_S", comment: "")
     let C_BROWN_S = NSLocalizedString("C_BROWN_S", comment: "")
+    
+    let LOG_OUT = NSLocalizedString("LOG_OUT", comment: "")
+    let FAULT_NETWORK = NSLocalizedString("FAULT_NETWORK", comment: "")
 
     
     

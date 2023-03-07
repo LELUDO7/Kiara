@@ -28,5 +28,7 @@ public let STRING = StringLocal()
 
 public let KIARA = Kiara()
 
+public let FRIENDS = Kiara_Friends()
+
 public let API = KiaraAPI()
 

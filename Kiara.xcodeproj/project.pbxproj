@@ -16,6 +16,10 @@
 		E907801829A40291004F8C84 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907801729A40291004F8C84 /* SignInView.swift */; };
 		E9106385299B155400C5FC7F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9106387299B155400C5FC7F /* Localizable.strings */; };
 		E910638A299B1A9A00C5FC7F /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9106389299B1A9A00C5FC7F /* LocalizableString.swift */; };
+		E91D879929B65C7A00444780 /* Kiara_Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D879829B65C7A00444780 /* Kiara_Friends.swift */; };
+		E91D879B29B65DB200444780 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D879A29B65DB200444780 /* UserInfo.swift */; };
+		E91D879E29B7A3F800444780 /* FriendsSrchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D879D29B7A3F800444780 /* FriendsSrchView.swift */; };
+		E91D87A029B7B87800444780 /* UserInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D879F29B7B87800444780 /* UserInfoItem.swift */; };
 		E9322DB429A906EE003444BF /* tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9322DB329A906EE003444BF /* tools.swift */; };
 		E93D843229A867060080B9E4 /* Kiara.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D843129A867060080B9E4 /* Kiara.swift */; };
 		E97F11A529A07818004ED048 /* Kiara_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F11A429A07818004ED048 /* Kiara_API.swift */; };
@@ -63,6 +67,10 @@
 		E9106386299B155400C5FC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9106388299B155900C5FC7F /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; usesTabs = 0; };
 		E9106389299B1A9A00C5FC7F /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
+		E91D879829B65C7A00444780 /* Kiara_Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiara_Friends.swift; sourceTree = "<group>"; };
+		E91D879A29B65DB200444780 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		E91D879D29B7A3F800444780 /* FriendsSrchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSrchView.swift; sourceTree = "<group>"; };
+		E91D879F29B7B87800444780 /* UserInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoItem.swift; sourceTree = "<group>"; };
 		E9322DB329A906EE003444BF /* tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tools.swift; sourceTree = "<group>"; };
 		E93D843129A867060080B9E4 /* Kiara.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiara.swift; sourceTree = "<group>"; };
 		E97F11A429A07818004ED048 /* Kiara_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiara_API.swift; sourceTree = "<group>"; };
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				E9063FCD299C08F60030DC96 /* DayItem.swift */,
+				E91D879F29B7B87800444780 /* UserInfoItem.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -131,6 +140,14 @@
 				E9CC84CD29A536D5004CC0B5 /* UserView.swift */,
 			);
 			path = NavigationItem;
+			sourceTree = "<group>";
+		};
+		E91D879C29B7A3D800444780 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				E91D879D29B7A3F800444780 /* FriendsSrchView.swift */,
+			);
+			path = Friends;
 			sourceTree = "<group>";
 		};
 		E9A84910298A1E9900F205CB = {
@@ -163,11 +180,12 @@
 				E9063FD5299C89600030DC96 /* DeleteCourse.swift */,
 				E9AF40252996C9FD00D7BCE3 /* models */,
 				E93D843129A867060080B9E4 /* Kiara.swift */,
+				E91D879829B65C7A00444780 /* Kiara_Friends.swift */,
 				E97F11A429A07818004ED048 /* Kiara_API.swift */,
 				E9106389299B1A9A00C5FC7F /* LocalizableString.swift */,
+				E9322DB329A906EE003444BF /* tools.swift */,
 				E9A84920298A1E9A00F205CB /* Assets.xcassets */,
 				E9A84922298A1E9A00F205CB /* Preview Content */,
-				E9322DB329A906EE003444BF /* tools.swift */,
 			);
 			path = Kiara;
 			sourceTree = "<group>";
@@ -190,6 +208,7 @@
 				E9AF40362998802800D7BCE3 /* DayOfWeek.swift */,
 				E9063FD1299C3B5E0030DC96 /* WeekDay.swift */,
 				E9063FD7299C8C5C0030DC96 /* Course.swift */,
+				E91D879A29B65DB200444780 /* UserInfo.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -197,6 +216,7 @@
 		E9AF402F2998126000D7BCE3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E91D879C29B7A3D800444780 /* Friends */,
 				E907801629A401F0004F8C84 /* NavigationItem */,
 				E907801529A401E2004F8C84 /* Item */,
 				E907801429A401BF004F8C84 /* Editing */,
@@ -282,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E93D843229A867060080B9E4 /* Kiara.swift in Sources */,
+				E91D879E29B7A3F800444780 /* FriendsSrchView.swift in Sources */,
 				E9AF403D29988CEA00D7BCE3 /* CourseEditoView.swift in Sources */,
 				E9AF403F29988D5000D7BCE3 /* CourseEditor.swift in Sources */,
 				E9063FD4299C80B30030DC96 /* DeleteCourseView.swift in Sources */,
@@ -289,10 +310,13 @@
 				E907801829A40291004F8C84 /* SignInView.swift in Sources */,
 				E9063FD2299C3B5E0030DC96 /* WeekDay.swift in Sources */,
 				E9AF40272996CA9300D7BCE3 /* CourseBloc.swift in Sources */,
+				E91D879B29B65DB200444780 /* UserInfo.swift in Sources */,
+				E91D879929B65C7A00444780 /* Kiara_Friends.swift in Sources */,
 				E9AF40312998127600D7BCE3 /* TodayView.swift in Sources */,
 				E9AF402B29980AAF00D7BCE3 /* EmptyBloc.swift in Sources */,
 				E9063FD8299C8C5C0030DC96 /* Course.swift in Sources */,
 				E9063FCE299C08F60030DC96 /* DayItem.swift in Sources */,
+				E91D87A029B7B87800444780 /* UserInfoItem.swift in Sources */,
 				E9CC84CE29A536D5004CC0B5 /* UserView.swift in Sources */,
 				E9AF40372998802800D7BCE3 /* DayOfWeek.swift in Sources */,
 				E9AF40332998128900D7BCE3 /* FriendsView.swift in Sources */,
