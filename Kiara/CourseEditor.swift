@@ -54,7 +54,7 @@ public func addCourse(name:String, local:String, color:UIColor, start:String, en
     resetStartHours()
     resetEndHours()
     
-    API.updateUserSchedule(userid: KIARA.user.string(forKey: "userId")!)
+    API.updateUserSchedule(userid: KIARA.getDataFromUser(userKey: KIARA.userKeys.userId))
     
     return false
 }

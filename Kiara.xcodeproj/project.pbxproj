@@ -16,7 +16,7 @@
 		E907801829A40291004F8C84 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907801729A40291004F8C84 /* SignInView.swift */; };
 		E9106385299B155400C5FC7F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9106387299B155400C5FC7F /* Localizable.strings */; };
 		E910638A299B1A9A00C5FC7F /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9106389299B1A9A00C5FC7F /* LocalizableString.swift */; };
-		E91D879929B65C7A00444780 /* Kiara_Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D879829B65C7A00444780 /* Kiara_Friends.swift */; };
+		E91D879929B65C7A00444780 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D879829B65C7A00444780 /* Friends.swift */; };
 		E91D879B29B65DB200444780 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D879A29B65DB200444780 /* UserInfo.swift */; };
 		E91D879E29B7A3F800444780 /* FriendsSrchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D879D29B7A3F800444780 /* FriendsSrchView.swift */; };
 		E91D87A029B7B87800444780 /* UserInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D879F29B7B87800444780 /* UserInfoItem.swift */; };
@@ -67,7 +67,7 @@
 		E9106386299B155400C5FC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9106388299B155900C5FC7F /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; usesTabs = 0; };
 		E9106389299B1A9A00C5FC7F /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
-		E91D879829B65C7A00444780 /* Kiara_Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiara_Friends.swift; sourceTree = "<group>"; };
+		E91D879829B65C7A00444780 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		E91D879A29B65DB200444780 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		E91D879D29B7A3F800444780 /* FriendsSrchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSrchView.swift; sourceTree = "<group>"; };
 		E91D879F29B7B87800444780 /* UserInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoItem.swift; sourceTree = "<group>"; };
@@ -176,11 +176,11 @@
 				E9A8491C298A1E9900F205CB /* KiaraApp.swift */,
 				E9AF402F2998126000D7BCE3 /* View */,
 				E9063FCF299C37130030DC96 /* Today.swift */,
+				E91D879829B65C7A00444780 /* Friends.swift */,
 				E9AF403E29988D5000D7BCE3 /* CourseEditor.swift */,
 				E9063FD5299C89600030DC96 /* DeleteCourse.swift */,
 				E9AF40252996C9FD00D7BCE3 /* models */,
 				E93D843129A867060080B9E4 /* Kiara.swift */,
-				E91D879829B65C7A00444780 /* Kiara_Friends.swift */,
 				E97F11A429A07818004ED048 /* Kiara_API.swift */,
 				E9106389299B1A9A00C5FC7F /* LocalizableString.swift */,
 				E9322DB329A906EE003444BF /* tools.swift */,
@@ -311,7 +311,7 @@
 				E9063FD2299C3B5E0030DC96 /* WeekDay.swift in Sources */,
 				E9AF40272996CA9300D7BCE3 /* CourseBloc.swift in Sources */,
 				E91D879B29B65DB200444780 /* UserInfo.swift in Sources */,
-				E91D879929B65C7A00444780 /* Kiara_Friends.swift in Sources */,
+				E91D879929B65C7A00444780 /* Friends.swift in Sources */,
 				E9AF40312998127600D7BCE3 /* TodayView.swift in Sources */,
 				E9AF402B29980AAF00D7BCE3 /* EmptyBloc.swift in Sources */,
 				E9063FD8299C8C5C0030DC96 /* Course.swift in Sources */,
@@ -472,7 +472,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kiara/Kiara.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Kiara/Preview Content\"";
 				DEVELOPMENT_TEAM = TW4Q47HKGX;
 				ENABLE_PREVIEWS = YES;
@@ -505,7 +505,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kiara/Kiara.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Kiara/Preview Content\"";
 				DEVELOPMENT_TEAM = TW4Q47HKGX;
 				ENABLE_PREVIEWS = YES;

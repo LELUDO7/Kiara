@@ -16,6 +16,30 @@ public class Kiara {
     let courseOpacity = 0.8
     
     let user = UserDefaults.standard
+    let userKeys = UserDefaultskeys()
+    
+    public func SaveDataInUser(data: String, userKey: String){
+        user.set(data, forKey: userKey)
+    }
+    
+    public func getDataFromUser(userKey: String) -> String{
+        if let data = user.object(forKey: userKey) as? String{
+            return data
+        }
+        else
+        {
+            return ""
+        }
+    }
+    
+    struct UserDefaultskeys{
+        let userId = "userId"
+        let firstName = "firstName"
+        let lastName = "lastName"
+        let friends = "friends"
+        let pendingRecieveFriend = "pendingReciveFriend"
+        let pendingSendFriend = "pendingSendFriend"
+    }
     
     public var schedule = [[Bloc]]()
     

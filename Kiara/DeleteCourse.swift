@@ -29,14 +29,14 @@ public func deleteCourse(courseDay:Int, courseStartHour:String){
             {
                 if(emptyBloc.display)
                 {
-                    API.updateUserSchedule(userid: KIARA.user.string(forKey: "userId")!)
+                    API.updateUserSchedule(userid: KIARA.getDataFromUser(userKey: KIARA.userKeys.userId))
                     return
                 }
                 emptyBloc.display = true
             }
             else
             {
-                API.updateUserSchedule(userid: KIARA.user.string(forKey: "userId")!)
+                API.updateUserSchedule(userid: KIARA.getDataFromUser(userKey: KIARA.userKeys.userId))
                 return
             }
         }
@@ -46,5 +46,5 @@ public func deleteCourse(courseDay:Int, courseStartHour:String){
         }
         i+=1
     }
-    API.updateUserSchedule(userid: KIARA.user.string(forKey: "userId")!)
+    API.updateUserSchedule(userid: KIARA.getDataFromUser(userKey: KIARA.userKeys.userId))
 }

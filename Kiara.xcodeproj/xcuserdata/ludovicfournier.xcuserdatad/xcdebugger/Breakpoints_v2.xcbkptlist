@@ -78,8 +78,8 @@
             filePath = "Kiara/Kiara_API.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "getUser(userId:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,25 +94,9 @@
             filePath = "Kiara/Kiara_API.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "getUser(userId:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "26D7FB84-CC0C-407C-A201-F83D283EF48E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kiara/Kiara_API.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "updateUserSchedule(userid:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -158,8 +142,8 @@
             filePath = "Kiara/Kiara.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "loadSchedule()"
             landmarkType = "7">
             <Locations>
@@ -206,8 +190,8 @@
             filePath = "Kiara/Kiara.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "saveSchedule()"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,8 +206,8 @@
             filePath = "Kiara/Kiara.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "saveSchedule()"
             landmarkType = "7">
             <Locations>
@@ -274,6 +258,134 @@
             endingLineNumber = "49"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43372F8D-DF28-43F3-A54C-9A97AA5F3880"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kiara/Friends.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "SendFriendRequest(friend:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81EEEAA1-DA5B-442E-AB47-DEA427F8D2C5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kiara/View/Item/UserInfoItem.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26A55C75-B3B2-457A-BBD4-F0A691DA1F6F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kiara/View/Item/UserInfoItem.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "26A55C75-B3B2-457A-BBD4-F0A691DA1F6F - 4b6a098f5e0ba652"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kiara.UserInfoItem.body.getter : some"
+                  moduleName = "Kiara"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ludovicfournier/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode/Kiara/Kiara/View/Item/UserInfoItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "828">
+               </Location>
+               <Location
+                  uuid = "26A55C75-B3B2-457A-BBD4-F0A691DA1F6F - 4f3dee3d1a48807b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Sendable () async -&gt; () in Kiara.UserInfoItem.body.getter : some"
+                  moduleName = "Kiara"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ludovicfournier/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode/Kiara/Kiara/View/Item/UserInfoItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2EA878D5-C90E-4FD2-A646-377A9CC94B08"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kiara/View/Item/UserInfoItem.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2EA878D5-C90E-4FD2-A646-377A9CC94B08 - 1f7ce802d78d3e61"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #2 @Sendable () async -&gt; () in Kiara.UserInfoItem.body.getter : some"
+                  moduleName = "Kiara"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ludovicfournier/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode/Kiara/Kiara/View/Item/UserInfoItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "2EA878D5-C90E-4FD2-A646-377A9CC94B08 - 137773775639524b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Kiara.UserInfo) -&gt; () in closure #2 @Sendable () async -&gt; () in Kiara.UserInfoItem.body.getter : some"
+                  moduleName = "Kiara"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ludovicfournier/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode/Kiara/Kiara/View/Item/UserInfoItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

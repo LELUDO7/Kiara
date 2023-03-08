@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct UserView: View {
-    @AppStorage("userId") var userId: String = ""
-    @AppStorage("firstName") var firstName: String = ""
-    @AppStorage("lastName") var lastName: String = ""
+    @AppStorage(KIARA.userKeys.userId) var userId: String = ""
+    @AppStorage(KIARA.userKeys.firstName) var firstName: String = ""
+    @AppStorage(KIARA.userKeys.lastName) var lastName: String = ""
+    @AppStorage(KIARA.userKeys.friends) var friends: [String] = []
+    @AppStorage(KIARA.userKeys.pendingSendFriend) var pendingReciveFriend: [String] = []
+    @AppStorage(KIARA.userKeys.pendingSendFriend) var pendingSendFriend: [String] = []
     
     @Binding var showSignInView : Bool
     
@@ -23,6 +26,9 @@ struct UserView: View {
                     userId = ""
                     firstName = ""
                     lastName = ""
+                    friends = []
+                    pendingSendFriend = []
+                    pendingReciveFriend = []
                     KIARA.schedule.removeAll()
                     KIARA.loadScheduleTemplate()
                 }
@@ -32,6 +38,8 @@ struct UserView: View {
         
     }
 }
+
+
 
 //struct UserView_Previews: PreviewProvider {
 //    static var previews: some View {

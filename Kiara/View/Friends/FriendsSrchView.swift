@@ -16,7 +16,10 @@ struct FriendsSrchView: View {
     var body: some View {
         NavigationStack{
                 List(userInfoList) { user in
+                    if user.idUser != KIARA.getDataFromUser(userKey: KIARA.userKeys.userId)
+                    {
                         UserInfoItem(user: user)
+                    }
                 }
                 .navigationTitle("Add friend")
                 .listStyle(.plain)

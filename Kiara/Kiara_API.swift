@@ -42,6 +42,43 @@ public class KiaraAPI {
         task.resume()
     }
     
+    func SendFriendRequest(friendId: String){
+        guard let userURL = URL(string: url + "friend/" + KIARA.getDataFromUser(userKey: KIARA.userKeys.userId)) else {
+            print("invalid url")
+            return
+        }
+        
+        var userRequest = URLRequest(url: userURL)
+        userRequest.httpMethod = "PATCH"
+        userRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let userBody = ["pendingSendFriend":[friendId]]
+        
+        userRequest.httpBody = try? JSONSerialization.data(withJSONObject: userBody, options: .fragmentsAllowed)
+        
+        let userTask = URLSession.shared.dataTask(with: userRequest) { data, _, error in
+        }
+        
+        guard let friendURL = URL(string: url + "friend/" + friendId) else {
+            print("invalid url")
+            return
+        }
+        
+        var friendRequest = URLRequest(url: friendURL)
+        friendRequest.httpMethod = "PATCH"
+        friendRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let friendBody = ["pendingReciveFriend":[KIARA.getDataFromUser(userKey: KIARA.userKeys.userId)]]
+        
+        friendRequest.httpBody = try? JSONSerialization.data(withJSONObject: friendBody, options: .fragmentsAllowed)
+        
+        let friendTask = URLSession.shared.dataTask(with: friendRequest) { data, _, error in
+        }
+        userTask.resume()
+        friendTask.resume()
+        
+    }
+    
     func updateUserSchedule(userid: String){
         let url = URL(string: url + "user/" + userid)!
         
@@ -124,9 +161,9 @@ public class KiaraAPI {
         }
         
         let body : [String: Any] = [
-            "idUser" :  KIARA.user.string(forKey: "userId"),
-            "firstName" :  KIARA.user.string(forKey: "firstName"),
-            "lastName" :  KIARA.user.string(forKey: "lastName"),
+            "idUser" :  KIARA.getDataFromUser(userKey: KIARA.userKeys.userId),
+            "firstName" :  KIARA.getDataFromUser(userKey: KIARA.userKeys.firstName),
+            "lastName" :  KIARA.getDataFromUser(userKey: KIARA.userKeys.lastName),
             "schedule" : emptySchedule
         ]
         
@@ -210,8 +247,10 @@ public class KiaraAPI {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 
                 let myResponse = try decoder.decode(Response.self, from: data)
-                KIARA.user.set(myResponse.firstName ,forKey: "firstName")
-                KIARA.user.set(myResponse.lastName ,forKey: "lastName")
+                FRIENDS.sendFriendRequest = myResponse.pendingSendFriend
+                FRIENDS.receiveFriendRequest = myResponse.pendingReciveFriend
+                KIARA.SaveDataInUser(data: myResponse.firstName, userKey: KIARA.userKeys.firstName)
+                KIARA.SaveDataInUser(data: myResponse.lastName, userKey: KIARA.userKeys.lastName)
                 var i = 0
                 for weekDay in KIARA.schedule{
                     if(i>0)
@@ -241,6 +280,9 @@ public class KiaraAPI {
         
         
     }
+    public struct PendingReciveFriend: Codable {
+        let pendingReciveFriend : [String]
+    }
     
     public struct ResponseUserInfo: Codable {
         let idUser : String
@@ -253,7 +295,9 @@ public class KiaraAPI {
         let firstName : String
         let lastName : String
         let schedule : [[apiResultBloc]]
-        
+        //let friends : [String]
+        let pendingReciveFriend : [String]
+        let pendingSendFriend : [String]
     }
     
     public struct apiResultBloc : Codable{
