@@ -11,7 +11,6 @@ struct UserView: View {
     @AppStorage(KIARA.userKeys.userId) var userId: String = ""
     @AppStorage(KIARA.userKeys.firstName) var firstName: String = ""
     @AppStorage(KIARA.userKeys.lastName) var lastName: String = ""
-    @AppStorage(KIARA.userKeys.friends) var friends: [String] = []
     @AppStorage(KIARA.userKeys.pendingSendFriend) var pendingReciveFriend: [String] = []
     @AppStorage(KIARA.userKeys.pendingSendFriend) var pendingSendFriend: [String] = []
     
@@ -26,9 +25,9 @@ struct UserView: View {
                     userId = ""
                     firstName = ""
                     lastName = ""
-                    friends = []
                     pendingSendFriend = []
                     pendingReciveFriend = []
+                    KIARA.friends.removeAll()
                     KIARA.schedule.removeAll()
                     KIARA.loadScheduleTemplate()
                 }

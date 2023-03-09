@@ -224,8 +224,8 @@ public class KiaraAPI {
         
     }
     
-    func getUser(userId: String, completion: @escaping (Bool) -> Void) {
-        let url = URL(string: url + "user/" + userId)!
+    func getFriend(friendId: String, completion: @escaping (Bool) -> Void) {
+        let url = URL(string: url + "user/" + friendId + "?schedule=yes")!
         
         let session = URLSession.shared
         var request = URLRequest(url: url)
@@ -246,11 +246,83 @@ public class KiaraAPI {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 
-                let myResponse = try decoder.decode(Response.self, from: data)
+                let myResponse = try decoder.decode(FriendResponse.self, from: data)
+                
+                
+                var friendSchedule = [[Bloc]]()
+                friendSchedule.append(self.cstjTemplate)
+                for _ in 1...5{
+                    friendSchedule.append(self.cstjTemplate)
+                }
+                
+                var i = 0
+                for weekDay in friendSchedule{
+                    if(i>0)
+                    {
+                        var u = 0
+                        for bloc in weekDay{
+                            let responseBloc = myResponse.schedule[i-1][u]
+                            if myResponse.schedule[i-1][u].name == ""{
+                                friendSchedule[i][u] = EmptyBloc(start: bloc.start, end: bloc.end, display: responseBloc.display)
+                            }
+                            else
+                            {
+                                friendSchedule[i][u] = CourseBloc(start: bloc.start, end: bloc.end, name: responseBloc.name, local: responseBloc.local, color: TOOLS.getSystemColor(color: responseBloc.color), nbBloc: responseBloc.nbBloc)
+                            }
+                            u += 1
+                        }
+                        
+                    }
+                    i += 1
+                }
+                
+                let friend = Friend(friendId: myResponse.idUser, firstName: myResponse.firstName, lastName: myResponse.lastName,schedule: friendSchedule)
+                
+                FRIENDS.friends.append(friend)
+                
+                completion(true)
+            } catch {
+                print(error)
+            }
+        }
+        task.resume()
+        
+    }
+    
+    func getUser(userId: String, completion: @escaping (Bool) -> Void) {
+        let url = URL(string: url + "user/" + userId + "?schedule=yes")!
+        
+        let session = URLSession.shared
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let data = data else {
+                print(NSError(domain: "myDomain", code: -1, userInfo: nil))
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                
+                let myResponse = try decoder.decode(UserResponse.self, from: data)
                 FRIENDS.sendFriendRequest = myResponse.pendingSendFriend
                 FRIENDS.receiveFriendRequest = myResponse.pendingReciveFriend
                 KIARA.SaveDataInUser(data: myResponse.firstName, userKey: KIARA.userKeys.firstName)
                 KIARA.SaveDataInUser(data: myResponse.lastName, userKey: KIARA.userKeys.lastName)
+                
+                KIARA.friends.removeAll()
+                for friend in myResponse.friends
+                {
+                    KIARA.friends.append(friend)
+                }
+                
                 var i = 0
                 for weekDay in KIARA.schedule{
                     if(i>0)
@@ -277,9 +349,8 @@ public class KiaraAPI {
             }
         }
         task.resume()
-        
-        
     }
+    
     public struct PendingReciveFriend: Codable {
         let pendingReciveFriend : [String]
     }
@@ -290,12 +361,18 @@ public class KiaraAPI {
         let lastName : String
     }
     
-    public struct Response: Codable{
+    public struct FriendResponse: Codable {
         let idUser : String
         let firstName : String
         let lastName : String
         let schedule : [[apiResultBloc]]
-        //let friends : [String]
+    }
+    public struct UserResponse: Codable{
+        let idUser : String
+        let firstName : String
+        let lastName : String
+        let schedule : [[apiResultBloc]]
+        let friends : [String]
         let pendingReciveFriend : [String]
         let pendingSendFriend : [String]
     }
@@ -309,7 +386,19 @@ public class KiaraAPI {
         let _id : String
     }
     
-    
+    private var cstjTemplate: [Bloc] = [
+        EmptyBloc(start: "08:00",end: "08:50", display: true),
+        EmptyBloc(start: "08:55",end: "09:45", display: true),
+        EmptyBloc(start: "09:50",end: "10:40", display: true),
+        EmptyBloc(start: "10:45",end: "11:35", display: true),
+        EmptyBloc(start: "11:40",end: "12:30", display: true),
+        EmptyBloc(start: "12:35",end: "14:20", display: true),
+        EmptyBloc(start: "13:30",end: "14:20", display: true),
+        EmptyBloc(start: "14:25",end: "15:15", display: true),
+        EmptyBloc(start: "15:20",end: "16:10", display: true),
+        EmptyBloc(start: "16:15",end: "17:05", display: true),
+        EmptyBloc(start: "17:10",end: "18:00", display: true)
+    ]
 }
 
 

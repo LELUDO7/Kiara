@@ -9,10 +9,29 @@ import SwiftUI
 
 struct FriendsView: View {
     @State var showFriendsSrch = false
+    @State var friends = FRIENDS.friends
     var body: some View {
         NavigationStack {
-            HStack{
-                
+            VStack{
+                Text("My friends")
+                List(friends) { friend in
+                    NavigationLink {
+                        FriendScheduleView(friend: friend, schedule: friend.schedule)
+                    } label: {
+                        HStack{
+                            Text(friend.firstName)
+                            Text(friend.lastName)
+                        }
+                    }
+                }
+                .listStyle(.plain)
+                Spacer()
+                Text("Friend resquest")
+                List {
+                    NavigationLink("Send friend request",destination: SendFriendRequestView())
+                    NavigationLink("Receive friend request",destination: ReceiveFriendRequestView())
+                }
+                .listStyle(.plain)
             }
             .navigationTitle(STRING.FRIENDS_S)
             .toolbar {
@@ -27,6 +46,14 @@ struct FriendsView: View {
                         FriendsSrchView(showThisView: $showFriendsSrch)
                             })
                 }
+            }
+        }
+        .task {
+            FRIENDS.friends.removeAll()
+            for friend in KIARA.friends{
+                API.getFriend(friendId: friend, completion: { done in
+                    friends = FRIENDS.friends
+                })
             }
         }
         

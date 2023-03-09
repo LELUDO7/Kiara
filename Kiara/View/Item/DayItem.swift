@@ -33,6 +33,7 @@ struct DayItem: View {
                         .frame(maxWidth:.infinity)
                         .frame(maxHeight: .infinity)
                         .background(RoundedRectangle(cornerRadius: 3, style: .continuous).fill(Color(uiColor: courseBloc.color)).opacity(KIARA.courseOpacity))
+
                 }else if let emptyBloc = bloc as? EmptyBloc{
                     if(emptyBloc.display)
                     {

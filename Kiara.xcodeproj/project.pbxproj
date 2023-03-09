@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90069DF29BA162A00F7A9CD /* SendFriendRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90069DE29BA162A00F7A9CD /* SendFriendRequestView.swift */; };
+		E90069E129BA16D900F7A9CD /* ReceiveFriendRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90069E029BA16D900F7A9CD /* ReceiveFriendRequestView.swift */; };
+		E90069E329BA18ED00F7A9CD /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90069E229BA18ED00F7A9CD /* Friend.swift */; };
 		E9063FCE299C08F60030DC96 /* DayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9063FCD299C08F60030DC96 /* DayItem.swift */; };
 		E9063FD0299C37130030DC96 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9063FCF299C37130030DC96 /* Today.swift */; };
 		E9063FD2299C3B5E0030DC96 /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9063FD1299C3B5E0030DC96 /* WeekDay.swift */; };
@@ -24,6 +27,7 @@
 		E93D843229A867060080B9E4 /* Kiara.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D843129A867060080B9E4 /* Kiara.swift */; };
 		E97F11A529A07818004ED048 /* Kiara_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F11A429A07818004ED048 /* Kiara_API.swift */; };
 		E97F11A729A07DA3004ED048 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97F11A629A07DA3004ED048 /* Launch Screen.storyboard */; };
+		E9A7F7FD29BA619A0067CCCF /* FriendScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A7F7FC29BA619A0067CCCF /* FriendScheduleView.swift */; };
 		E9A8491D298A1E9900F205CB /* KiaraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8491C298A1E9900F205CB /* KiaraApp.swift */; };
 		E9A8491F298A1E9900F205CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8491E298A1E9900F205CB /* ContentView.swift */; };
 		E9A84921298A1E9A00F205CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A84920298A1E9A00F205CB /* Assets.xcassets */; };
@@ -55,6 +59,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E90069DE29BA162A00F7A9CD /* SendFriendRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFriendRequestView.swift; sourceTree = "<group>"; };
+		E90069E029BA16D900F7A9CD /* ReceiveFriendRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveFriendRequestView.swift; sourceTree = "<group>"; };
+		E90069E229BA18ED00F7A9CD /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		E9063FCD299C08F60030DC96 /* DayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayItem.swift; sourceTree = "<group>"; };
 		E9063FCF299C37130030DC96 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 		E9063FD1299C3B5E0030DC96 /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
@@ -76,6 +83,7 @@
 		E97F11A429A07818004ED048 /* Kiara_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiara_API.swift; sourceTree = "<group>"; };
 		E97F11A629A07DA3004ED048 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E99F64A629A953450063E55B /* Kiara.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Kiara.entitlements; sourceTree = "<group>"; };
+		E9A7F7FC29BA619A0067CCCF /* FriendScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendScheduleView.swift; sourceTree = "<group>"; };
 		E9A84919298A1E9900F205CB /* Kiara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A8491C298A1E9900F205CB /* KiaraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiaraApp.swift; sourceTree = "<group>"; };
 		E9A8491E298A1E9900F205CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				E91D879D29B7A3F800444780 /* FriendsSrchView.swift */,
+				E90069DE29BA162A00F7A9CD /* SendFriendRequestView.swift */,
+				E90069E029BA16D900F7A9CD /* ReceiveFriendRequestView.swift */,
+				E9A7F7FC29BA619A0067CCCF /* FriendScheduleView.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -176,12 +187,12 @@
 				E9A8491C298A1E9900F205CB /* KiaraApp.swift */,
 				E9AF402F2998126000D7BCE3 /* View */,
 				E9063FCF299C37130030DC96 /* Today.swift */,
-				E91D879829B65C7A00444780 /* Friends.swift */,
 				E9AF403E29988D5000D7BCE3 /* CourseEditor.swift */,
 				E9063FD5299C89600030DC96 /* DeleteCourse.swift */,
 				E9AF40252996C9FD00D7BCE3 /* models */,
 				E93D843129A867060080B9E4 /* Kiara.swift */,
 				E97F11A429A07818004ED048 /* Kiara_API.swift */,
+				E91D879829B65C7A00444780 /* Friends.swift */,
 				E9106389299B1A9A00C5FC7F /* LocalizableString.swift */,
 				E9322DB329A906EE003444BF /* tools.swift */,
 				E9A84920298A1E9A00F205CB /* Assets.xcassets */,
@@ -209,6 +220,7 @@
 				E9063FD1299C3B5E0030DC96 /* WeekDay.swift */,
 				E9063FD7299C8C5C0030DC96 /* Course.swift */,
 				E91D879A29B65DB200444780 /* UserInfo.swift */,
+				E90069E229BA18ED00F7A9CD /* Friend.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -307,6 +319,7 @@
 				E9AF403F29988D5000D7BCE3 /* CourseEditor.swift in Sources */,
 				E9063FD4299C80B30030DC96 /* DeleteCourseView.swift in Sources */,
 				E97F11A529A07818004ED048 /* Kiara_API.swift in Sources */,
+				E90069E129BA16D900F7A9CD /* ReceiveFriendRequestView.swift in Sources */,
 				E907801829A40291004F8C84 /* SignInView.swift in Sources */,
 				E9063FD2299C3B5E0030DC96 /* WeekDay.swift in Sources */,
 				E9AF40272996CA9300D7BCE3 /* CourseBloc.swift in Sources */,
@@ -319,12 +332,15 @@
 				E91D87A029B7B87800444780 /* UserInfoItem.swift in Sources */,
 				E9CC84CE29A536D5004CC0B5 /* UserView.swift in Sources */,
 				E9AF40372998802800D7BCE3 /* DayOfWeek.swift in Sources */,
+				E9A7F7FD29BA619A0067CCCF /* FriendScheduleView.swift in Sources */,
+				E90069DF29BA162A00F7A9CD /* SendFriendRequestView.swift in Sources */,
 				E9AF40332998128900D7BCE3 /* FriendsView.swift in Sources */,
 				E9322DB429A906EE003444BF /* tools.swift in Sources */,
 				E9063FD0299C37130030DC96 /* Today.swift in Sources */,
 				E9063FD6299C89600030DC96 /* DeleteCourse.swift in Sources */,
 				E9AF40292996CAC300D7BCE3 /* TimeBloc.swift in Sources */,
 				E910638A299B1A9A00C5FC7F /* LocalizableString.swift in Sources */,
+				E90069E329BA18ED00F7A9CD /* Friend.swift in Sources */,
 				E9AF402D2998116100D7BCE3 /* WeekView.swift in Sources */,
 				E9AF40242996C9CD00D7BCE3 /* Bloc.swift in Sources */,
 				E9A8491F298A1E9900F205CB /* ContentView.swift in Sources */,

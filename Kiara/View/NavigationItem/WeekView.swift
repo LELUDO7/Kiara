@@ -31,6 +31,7 @@ struct WeekView: View {
                                 Color.clear
                                     .onAppear {
                                         courseBlocHeight = CGFloat(textViewProxy.size.height)
+                                        KIARA.courseBlocHeight = courseBlocHeight
                                     }
                             })
                     }
@@ -78,10 +79,10 @@ struct WeekView: View {
                         CourseEditorView().onDisappear(){
                             blocs = KIARA.schedule
                         }
-                            })
+                    })
                 }
             }
-
+            
         }
         
     }

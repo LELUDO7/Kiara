@@ -18,6 +18,10 @@ public class Kiara {
     let user = UserDefaults.standard
     let userKeys = UserDefaultskeys()
     
+    public var schedule = [[Bloc]]()
+    public var friends = [String]()
+    public var courseBlocHeight = CGFloat(0)
+    
     public func SaveDataInUser(data: String, userKey: String){
         user.set(data, forKey: userKey)
     }
@@ -36,12 +40,9 @@ public class Kiara {
         let userId = "userId"
         let firstName = "firstName"
         let lastName = "lastName"
-        let friends = "friends"
         let pendingRecieveFriend = "pendingReciveFriend"
         let pendingSendFriend = "pendingSendFriend"
     }
-    
-    public var schedule = [[Bloc]]()
     
     public func loadScheduleTemplate(){
         schedule.append(cstjTemplate)
